@@ -1,0 +1,15 @@
+# === Core Cheminformatics ===
+rdkit==2023.09.5  # Official wheel supports Python 3.8–3.11 (no conda needed)
+
+# === Scientific Stack ===
+numpy<2.0         # Ensure compatibility with RDKit binary extensions
+pandas
+matplotlib
+seaborn
+
+# === Web & APIs ===
+requests
+
+# === Optional for Visualization ===
+py3Dmol
+notebook
