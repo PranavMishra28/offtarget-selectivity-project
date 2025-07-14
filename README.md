@@ -53,6 +53,14 @@ source .venv/bin/activate       # On macOS/Linux
 
 # 3. Install dependencies
 pip install -r requirements.txt
+
+# 4. Download GTEx expression dataset
+mkdir -p data/gtex
+curl -L \
+  "https://zenodo.org/record/4073231/files/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_median_tpm.tsv" \
+  -o data/gtex/GTEx_median_tpm.tsv
+
+gzip -f data/gtex/GTEx_median_tpm.tsv
 ```
 
 ---
