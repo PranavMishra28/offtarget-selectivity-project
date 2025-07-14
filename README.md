@@ -40,21 +40,31 @@ offtarget_selectivity/
 
 ## ⚙️ Setup Instructions
 
+### 1. Clone the repo
+
 ```bash
-# 1. Clone the repo
 git clone https://github.com/yourusername/offtarget-selectivity.git
 cd offtarget-selectivity
+```
 
-# 2. Create a virtual environment
+### 2. Create a virtual environment
+
+```bash
 python -m venv .venv
 source .venv/Scripts/activate   # On Windows
 # or
 source .venv/bin/activate       # On macOS/Linux
+```
 
-# 3. Install dependencies
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# 4. Download GTEx expression dataset
+### 4. Download GTEx expression dataset
+
+```bash
 mkdir -p data/gtex
 curl -L \
   "https://zenodo.org/record/4073231/files/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_median_tpm.tsv" \

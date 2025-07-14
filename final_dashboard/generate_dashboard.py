@@ -44,7 +44,7 @@ def generate_final_dashboard(
             "uniprot_id": uid,
             "original_score": info["original_score"],
             "expression_weighted_score": info["tissue_weighted_score"],
-            "avg_expression": info["avg_expression_percentile"]
+            "avg_expression": info.get("avg_expression_tpm") or info.get("avg_expression_percentile", "N/A")
         })
     df = pd.DataFrame(flat_data)
     df.to_csv(os.path.join(output_dir, "compound_summary.csv"), index=False)

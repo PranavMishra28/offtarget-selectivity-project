@@ -19,3 +19,5 @@ streamlit
 
 # Compatibility
 pybind11>=2.12
+
+scipy
