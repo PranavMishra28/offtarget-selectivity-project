@@ -8,6 +8,8 @@ from structure_modeling.structure_modeling import mock_structure_binding_analysi
 from impact_risk.impact_estimator import estimate_impact_risk
 from expression_filter.expression_filter import apply_expression_weighting
 from final_dashboard.generate_dashboard import generate_final_dashboard
+from conflict_resolution.conflict_resolution import resolve_model_conflicts
+
 
 
 def run_offtarget_selectivity_pipeline(
@@ -45,6 +47,12 @@ def run_offtarget_selectivity_pipeline(
 
     print("\n📊 [STEP 7] Generating Final Summary Dashboard")
     generate_final_dashboard()
+
+    print("\n⚕️ [STEP 8] Optional Task: Conflict & Redundancy Resolution")
+    conflict_summary = resolve_model_conflicts(
+    empirical_path="empirical_binding/offtarget_predictions.json",
+    structural_path="structure_modeling/binding_risk.json"
+)
 
     print("\n✅ All steps complete. Check respective folders for results.")
 

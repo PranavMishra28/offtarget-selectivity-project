@@ -15,26 +15,8 @@ This project implements a multi-step pipeline to evaluate the **off-target risks
 5. **IMPACT Estimator** – Compute selectivity index and safety flag
 6. **Metrics & Outputs** – Generate heatmaps, JSON summaries, prioritization scores
 7. **Dashboard (Optional)** – Streamlit visualization layer (coming soon)
-
----
-
-## 📦 Project Structure
-
-```
-offtarget_selectivity/
-│
-├── 01_nebula/                   # 3D generation
-├── 02_sparrow/                  # Synthetic prioritization
-├── 03_empirical_binding/        # ChEMBL-based off-target prediction
-├── 04_structure_modeling/       # Structure-based risk estimation
-├── 05_impact_risk/              # Final selectivity and decision logic
-├── output_formatter/            # CSV, JSON, heatmap generation
-├── target_panel/                # UniProt panel construction
-├── model_wrappers/              # DeepPurpose integration
-├── dashboard/                   # (Optional) Streamlit interface
-├── run.py                       # 🔁 Main runner script
-└── requirements.txt             # 📦 Dependencies
-```
+8. **Conflict & Redundancy Resolution (Optional Task)** - conflict resolution & redundancy checking logic between AlphaFold vs Empirical
+   models
 
 ---
 
