@@ -1,5 +1,3 @@
-# offtarget_selectivity/03_empirical_binding/empirical_binding.py
-
 import requests
 import json
 import os
@@ -7,81 +5,90 @@ import os
 
 def get_empirical_offtargets(
     smiles: str,
-    output_path="empirical_binding/offtarget_predictions.json"
+    output_path="empirical_binding/offtarget_predictions.json",
+    min_similarity=0.7,
+    max_results=30,
 ) -> dict:
     """
-    Queries ChEMBL for empirical off-targets using MoA data.
-    Falls back to experimental activity and target resolution if MoA data is unavailable.
-
+    Queries ChEMBL for empirical off-targets using ligand similarity and activity-to-UniProt mapping.
     Args:
         smiles (str): The SMILES string of the input compound.
         output_path (str): Where to store the output predictions JSON.
-
+        min_similarity (float): Minimum similarity (Tanimoto, 0-1).
+        max_results (int): Max number of similar molecules to scan.
     Returns:
         dict: Mapping of UniProt IDs to normalized confidence scores.
     """
-    print(f"🔍 Querying ChEMBL for targets of: {smiles}")
+    print(f"🔍 Querying ChEMBL for empirical off-targets of: {smiles}")
 
-    # Step 1: Similarity search to get closest ChEMBL molecule
-    sim_url = f"https://www.ebi.ac.uk/chembl/api/data/similarity/{smiles}/80?format=json"
+    sim_score = int(min_similarity * 100)
+    sim_url = f"https://www.ebi.ac.uk/chembl/api/data/similarity/{smiles}/{sim_score}?format=json&limit={max_results}"
+    session = requests.Session()
     try:
-        r = requests.get(sim_url, timeout=10)
-        if r.status_code != 200 or not r.json().get("molecules"):
+        r = session.get(sim_url, timeout=15)
+        r.raise_for_status()
+        molecules = r.json().get("molecules", [])
+        if not molecules:
             raise ValueError("❌ No similar molecule found in ChEMBL.")
 
-        chembl_id = r.json()["molecules"][0]["molecule_chembl_id"]
-        print(f"✔ Found similar ChEMBL ID: {chembl_id}")
-
-        # Step 2: Try MoA endpoint
-        moa_url = (
-            f"https://www.ebi.ac.uk/chembl/api/data/mechanism"
-            f"?molecule_chembl_id={chembl_id}&format=json"
-        )
-        r2 = requests.get(moa_url, timeout=10)
-
+        # UniProt mapping cache
+        target2uniprot = {}
         predictions = {}
-        if r2.status_code == 200:
-            for mech in r2.json().get("mechanisms", []):
-                for comp in mech.get("target_components", []):
-                    uid = comp.get("accession")
-                    if uid:
-                        predictions[uid] = mech.get("confidence_score", 0) / 10.0
 
-        if predictions:
-            print(f"✅ Found {len(predictions)} targets from MoA.")
-            os.makedirs(os.path.dirname(output_path), exist_ok=True)
-            with open(output_path, "w") as f:
-                json.dump(predictions, f, indent=4)
-            return predictions
+        for mol in molecules:
+            chembl_id = mol.get("molecule_chembl_id")
+            similarity = float(mol.get("similarity", 0)) / 100.0
 
-        # Step 3: Fallback — try experimental activity data
-        print("⚠️ MoA empty — using activity endpoint as fallback.")
-        act_url = f"https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id={chembl_id}&limit=1000"
-        r3 = requests.get(act_url, timeout=10)
+            # Fetch activities for molecule
+            act_url = f"https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id={chembl_id}&limit=50"
+            try:
+                act_resp = session.get(act_url, timeout=15)
+                act_resp.raise_for_status()
+                activities = act_resp.json().get("activities", [])
+            except Exception as e:
+                print(f"  ⚠ Skipping {chembl_id}: failed to fetch activity: {e}")
+                continue
 
-        if r3.status_code == 200:
-            activities = r3.json().get("activities", [])
-            for entry in activities:
-                target_id = entry.get("target_chembl_id")
-                if not target_id:
+            for act in activities:
+                if act.get("target_organism") != "Homo sapiens":
+                    continue
+                tgt_chembl_id = act.get("target_chembl_id")
+                if not tgt_chembl_id:
                     continue
 
-                # Resolve ChEMBL target → UniProt ID
-                target_url = f"https://www.ebi.ac.uk/chembl/api/data/target/{target_id}?format=json"
-                r_target = requests.get(target_url, timeout=10)
-                if r_target.status_code != 200:
-                    continue
+                # UniProt cache lookup/fetch
+                if tgt_chembl_id not in target2uniprot:
+                    tgt_url = f"https://www.ebi.ac.uk/chembl/api/data/target/{tgt_chembl_id}.json"
+                    try:
+                        tgt_resp = session.get(tgt_url, timeout=10)
+                        tgt_resp.raise_for_status()
+                        tgt_data = tgt_resp.json()
+                        found = False
+                        for comp in tgt_data.get("target_components", []):
+                            for xref in comp.get("target_component_xrefs", []):
+                                if xref.get("xref_src_db") == "UniProt":
+                                    target2uniprot[tgt_chembl_id] = xref.get("xref_id")
+                                    found = True
+                                    break
+                            if found:
+                                break
+                        if not found:
+                            target2uniprot[tgt_chembl_id] = None
+                    except Exception as e:
+                        print(f"    ⚠ Error resolving UniProt for {tgt_chembl_id}: {e}")
+                        target2uniprot[tgt_chembl_id] = None
 
-                components = r_target.json().get("target_components", [])
-                for comp in components:
-                    uid = comp.get("accession")
-                    if uid:
-                        predictions[uid] = predictions.get(uid, 0.5)  # fallback score
+                uniprot = target2uniprot.get(tgt_chembl_id)
+                if uniprot:
+                    if (uniprot not in predictions) or (
+                        similarity > predictions[uniprot]
+                    ):
+                        predictions[uniprot] = similarity
 
         if not predictions:
-            raise ValueError("❌ No UniProt targets found via fallback activity data.")
+            raise ValueError("❌ No UniProt targets found via activity data.")
 
-        print(f"✅ Found {len(predictions)} targets from fallback activity resolution.")
+        print(f"✅ Found {len(predictions)} empirical off-targets.")
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         with open(output_path, "w") as f:
             json.dump(predictions, f, indent=4)
@@ -89,19 +96,15 @@ def get_empirical_offtargets(
 
     except Exception as e:
         print(f"❌ Empirical target prediction failed: {e}")
-        print("⚠️ Falling back to mock empirical targets.")
-
-        # Final fallback (hardcoded) if all else fails
+        print("⚠ Falling back to mock empirical targets.")
         fallback = {
-            "P23219": 0.2,   # COX-1
+            "P23219": 0.2,  # COX-1
             "P35354": 0.12,
             "P29274": 0.35,
             "P41594": 0.28,
-            "P08172": 0.60
+            "P08172": 0.60,
         }
-
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         with open(output_path, "w") as f:
             json.dump(fallback, f, indent=4)
-
         return fallback

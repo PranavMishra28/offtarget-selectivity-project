@@ -14,7 +14,7 @@ This project implements a multi-step pipeline to evaluate the **off-target risks
 4. **Structure Modeling** – Simulate AlphaFold–PLIP binding mock scores
 5. **IMPACT Estimator** – Compute selectivity index and safety flag
 6. **Metrics & Outputs** – Generate heatmaps, JSON summaries, prioritization scores
-7. **Dashboard (Optional)** – Streamlit visualization layer (coming soon)
+7. **Dashboard** – Aggregated summary of all risk metrics, expression scores, and final recommendations
 8. **Conflict & Redundancy Resolution (Optional Task)** - conflict resolution & redundancy checking logic between AlphaFold vs Empirical
    models
 
@@ -80,12 +80,47 @@ python run.py
 
 ---
 
-## 📊 Example Output
+## 📊 Output Files
 
-- `offtarget_report.csv` – Ranked list of off-targets
-- `offtarget_report.json` – SMILES, predictions, metrics
-- `offtarget_report_heatmap.png` – Visual score heatmap
-- `impact_summary.json` – Final decision: Reject / Watch / Synthesize
+### 🧪 Task 1: 🌌 NEBULA (Library Generation)
+
+- `/nebula/generated_library.sdf`
+  → SDF file of structurally similar analogs generated from input compound
+
+### 🧬 Task 2: 🧪 SPARROW (Synthetic Accessibility)
+
+- `/sparrow/triaged_library.csv`
+  → Molecules ranked by synthetic difficulty and prioritization score
+
+### 📈 Task 3: Empirical Binding (ChEMBL)
+
+- `/empirical_binding/offtarget_predictions.json`
+  → Empirically associated off-target UniProt IDs and confidence scores
+
+### 🧠 Task 4: Structural Binding Risk (AlphaFold + PLIP)
+
+- `/structure_modeling/binding_risk.json`
+  → Structural risk estimate (mocked or real docking results per UniProt ID)
+
+### ⚖️ Task 5: Selectivity & Safety (IMPACT)
+
+- `/impact_risk/impact_summary.json`
+  → Combined risk summary with decision flag: **Synthesize**, **Watch**, or **Reject**
+
+### 🧬 Task 6: Expression-Aware Risk Reweighting (GTEx)
+
+- `/expression_filter/tissue_weighted_risk.json`
+  → Risk scores adjusted based on average GTEx tissue expression
+
+### 📊 Task 7: Final Dashboard Summary
+
+- `/final_dashboard/compound_summary.json`
+  → Aggregated summary of all risk metrics, expression scores, and final recommendations
+
+### 🔀 Optional Task 8: Conflict & Redundancy Resolution
+
+- `/conflict_resolution/conflict_summary.json`
+  → Flags for targets with model disagreement (`conflict`), similarity (`redundant`), or agreement
 
 ---
 

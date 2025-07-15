@@ -53,14 +53,15 @@ def run_offtarget_selectivity_pipeline(
     empirical_path="empirical_binding/offtarget_predictions.json",
     structural_path="structure_modeling/binding_risk.json"
 )
-
+    if conflict_summary:
+        print(conflict_summary)
     print("\n✅ All steps complete. Check respective folders for results.")
 
 
 if __name__ == "__main__":
     # Example compound: Aspirin
     compound_smiles = "CC(=O)OC1=CC=CC=C1C(=O)O"
-    primary_target_uniprot = "P23219"  # COX-1
+    primary_target_uniprot = "P33259"  # COX-1
 
     run_offtarget_selectivity_pipeline(
         smiles=compound_smiles,
