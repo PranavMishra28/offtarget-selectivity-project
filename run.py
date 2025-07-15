@@ -49,12 +49,11 @@ def run_offtarget_selectivity_pipeline(
     generate_final_dashboard()
 
     print("\n⚕️ [STEP 8] Optional Task: Conflict & Redundancy Resolution")
-    conflict_summary = resolve_model_conflicts(
+    resolve_model_conflicts(
     empirical_path="empirical_binding/offtarget_predictions.json",
     structural_path="structure_modeling/binding_risk.json"
 )
-    if conflict_summary:
-        print(conflict_summary)
+
     print("\n✅ All steps complete. Check respective folders for results.")
 
 
