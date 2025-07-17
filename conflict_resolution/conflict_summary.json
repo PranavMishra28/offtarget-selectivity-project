@@ -1,0 +1,122 @@
+{
+    "B3KMM8": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "B2R7G2": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "P10635": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "P33259": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "A0PJ95": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "B4DI32": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "B4E2A5": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "A8K2G5": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "O94975": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "B2RXH2": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "P11712": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "A8CZ64": {
+        "empirical_score": 0.699999988079071,
+        "structural_score": 0.923,
+        "delta": 0.223,
+        "relation": "agreeing"
+    },
+    "P05177": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "E7EMT8": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "E7ESS9": {
+        "empirical_score": 1.0,
+        "structural_score": 0.0,
+        "delta": 1.0,
+        "relation": "conflict"
+    },
+    "P05184": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "A8K802": {
+        "empirical_score": 1.0,
+        "structural_score": 0.0,
+        "delta": 1.0,
+        "relation": "conflict"
+    },
+    "P27695": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "P23197": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "Q5H927": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    }
+}

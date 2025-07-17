@@ -1,0 +1,7 @@
+{
+    "uniprot_id": "A8CZ64",
+    "rmsd": 4.21,
+    "binding_score": 0.923,
+    "pose_stable": true,
+    "notes": "Simulated pose via mock docking. Replace with AlphaFold + PLIP for real use."
+}

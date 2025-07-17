@@ -1,0 +1,111 @@
+{
+    "compound_on_target": "P33259",
+    "on_target_score": 0.7586,
+    "avg_off_target_score": 0.6782,
+    "selectivity_score": 1.1185,
+    "decision_flag": "Watch",
+    "top_risky_offtargets": [
+        {
+            "uniprot_id": "O94975",
+            "combined_score": 0.9036
+        },
+        {
+            "uniprot_id": "P23197",
+            "combined_score": 0.8831
+        },
+        {
+            "uniprot_id": "P10635",
+            "combined_score": 0.8221
+        },
+        {
+            "uniprot_id": "A8CZ64",
+            "combined_score": 0.8115
+        },
+        {
+            "uniprot_id": "B4DI32",
+            "combined_score": 0.7821
+        },
+        {
+            "uniprot_id": "A8K802",
+            "combined_score": 0.7745
+        },
+        {
+            "uniprot_id": "B2R7G2",
+            "combined_score": 0.7721
+        },
+        {
+            "uniprot_id": "P27695",
+            "combined_score": 0.7556
+        },
+        {
+            "uniprot_id": "B2RXH2",
+            "combined_score": 0.7286
+        },
+        {
+            "uniprot_id": "P05184",
+            "combined_score": 0.7121
+        }
+    ],
+    "expression_weighted_risks": {
+        "O94975": {
+            "original_score": 0.9036,
+            "avg_expression_tpm": 0.0,
+            "avg_expression_percentile": 12.15,
+            "tissue_weighted_score": 0.9036
+        },
+        "P23197": {
+            "original_score": 0.8831,
+            "avg_expression_tpm": 0.0,
+            "avg_expression_percentile": 12.15,
+            "tissue_weighted_score": 0.8831
+        },
+        "P10635": {
+            "original_score": 0.8221,
+            "avg_expression_tpm": 0.0,
+            "avg_expression_percentile": 12.15,
+            "tissue_weighted_score": 0.8221
+        },
+        "A8CZ64": {
+            "original_score": 0.8115,
+            "avg_expression_tpm": 0.0,
+            "avg_expression_percentile": 12.15,
+            "tissue_weighted_score": 0.8115
+        },
+        "B4DI32": {
+            "original_score": 0.7821,
+            "avg_expression_tpm": 0.0,
+            "avg_expression_percentile": 12.15,
+            "tissue_weighted_score": 0.7821
+        },
+        "A8K802": {
+            "original_score": 0.7745,
+            "avg_expression_tpm": 0.0,
+            "avg_expression_percentile": 12.15,
+            "tissue_weighted_score": 0.7745
+        },
+        "B2R7G2": {
+            "original_score": 0.7721,
+            "avg_expression_tpm": 0.0,
+            "avg_expression_percentile": 12.15,
+            "tissue_weighted_score": 0.7721
+        },
+        "P27695": {
+            "original_score": 0.7556,
+            "avg_expression_tpm": 0.0,
+            "avg_expression_percentile": 12.15,
+            "tissue_weighted_score": 0.7556
+        },
+        "B2RXH2": {
+            "original_score": 0.7286,
+            "avg_expression_tpm": 0.0,
+            "avg_expression_percentile": 12.15,
+            "tissue_weighted_score": 0.7286
+        },
+        "P05184": {
+            "original_score": 0.7121,
+            "avg_expression_tpm": 0.0,
+            "avg_expression_percentile": 12.15,
+            "tissue_weighted_score": 0.7121
+        }
+    }
+}

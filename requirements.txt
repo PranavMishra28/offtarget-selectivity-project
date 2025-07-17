@@ -1,23 +1,58 @@
-rdkit==2023.09.5 
 # Core Scientific Libraries
+rdkit==2023.09.5
 numpy<2.0
-pandas
-matplotlib
-seaborn
+pandas>=1.5.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+scipy>=1.9.0
 
 # ChEMBL Client for Empirical Binding
-chembl_webresource_client
+chembl_webresource_client>=0.10.0
 
-# GTEx Expression Filtering
-tspex
+# Web & API Integration
+requests>=2.28.0
+aiohttp>=3.8.0
+aiofiles>=0.8.0
 
-# Web & Utility
-requests
+# Advanced Cheminformatics
+mordred>=1.2.0
+molfeat>=0.8.0
 
-# Optional for dashboard (Task 7)
-streamlit
+# Generative AI & ML
+torch>=1.12.0
+transformers>=4.20.0
+scikit-learn>=1.1.0
+xgboost>=1.6.0
 
-# Compatibility
-pybind11>=2.12
+# Structure Modeling & Docking
+biopython>=1.79
 
-scipy
+# Visualization & Dashboard
+plotly>=5.10.0
+dash>=2.6.0
+dash-bootstrap-components>=1.3.0
+
+# Configuration & Logging
+pyyaml>=6.0
+python-dotenv>=0.19.0
+structlog>=22.1.0
+
+# Testing & Validation
+pytest>=7.0.0
+pytest-asyncio>=0.20.0
+
+# Performance & Scaling
+ray>=2.0.0
+
+# Ion Channel & Safety Models
+deepchem>=2.7.0
+
+# API Documentation
+fastapi>=0.85.0
+uvicorn>=0.18.0
+pydantic>=1.10.0
+
+# Additional Utilities
+tqdm>=4.64.0
+click>=8.1.0
+rich>=12.4.0

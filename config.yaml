@@ -1,0 +1,89 @@
+# Off-Target & Selectivity Pipeline Configuration
+# Version: 2.0
+
+# API Configuration
+apis:
+  swiss_target_prediction:
+    base_url: "http://www.swisstargetprediction.ch"
+    rate_limit: 10 # requests per minute
+    timeout: 30
+
+  chembl:
+    base_url: "https://www.ebi.ac.uk/chembl/api"
+    rate_limit: 60
+    timeout: 15
+
+  askcos:
+    base_url: "https://askcos.mit.edu/api"
+    rate_limit: 5
+    timeout: 60
+
+  ibm_rxn:
+    base_url: "https://rxn.res.ibm.com/rxn/api"
+    rate_limit: 10
+    timeout: 45
+
+  alphafold:
+    base_url: "https://alphafold.ebi.ac.uk/api"
+    rate_limit: 2
+    timeout: 300
+
+# Model Configuration
+models:
+  generative:
+    library: "moses" # Options: moses, chemformer, reinvent, prescient
+    num_variants: 50
+    novelty_threshold: 0.7
+    validity_check: true
+    pains_filter: true
+
+  safety:
+    herg_model: "pred_herg"
+    nav_model: "deephit"
+    ca_model: "ion_channel_predictor"
+    risk_threshold: 0.3
+
+  binding:
+    confidence_threshold: 0.5
+    max_targets: 100
+    similarity_cutoff: 0.7
+
+# Pipeline Configuration
+pipeline:
+  scoring_weights:
+    empirical_confidence: 0.4
+    structural_binding_score: 0.3
+    tissue_expression_weight: 0.2
+    synthesis_feasibility: 0.1
+
+  decision_thresholds:
+    synthesize: 2.0
+    watch: 1.0
+    reject: 0.5
+
+  tissue_weights:
+    cns: 2.0
+    cardiac: 1.8
+    liver: 1.5
+    kidney: 1.3
+    default: 1.0
+
+# Performance Configuration
+performance:
+  max_concurrent_requests: 10
+  cache_ttl: 3600 # seconds
+  batch_size: 50
+  timeout_multiplier: 1.5
+
+# Output Configuration
+output:
+  save_intermediate: true
+  compression: true
+  format: "json" # Options: json, csv, parquet
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "structured"
+  file_output: true
+  console_output: true
