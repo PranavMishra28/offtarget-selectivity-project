@@ -1,0 +1,58 @@
+{
+  "uniprot_id": "P33259",
+  "ligand_smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+  "binding_score": 0.4762,
+  "structure_prediction": {
+    "uniprot_id": "P33259",
+    "plddt_score": 0.85,
+    "structure_url": "",
+    "confidence": 0.8,
+    "prediction_method": "fallback",
+    "metadata": {
+      "model_type": "mock",
+      "prediction_time": "",
+      "structure_format": "pdb"
+    }
+  },
+  "docking_analysis": {
+    "docking_score": -6.217,
+    "rmsd": 2.331,
+    "pose_stable": false,
+    "binding_affinity": 6.217,
+    "confidence": 1.0,
+    "analysis_method": "mock"
+  },
+  "interaction_analysis": {
+    "interactions": {
+      "hydrogen_bonds": {
+        "donor": 1,
+        "acceptor": 3,
+        "total": 4,
+        "strength": 0.4
+      },
+      "hydrophobic": {
+        "contacts": 3,
+        "strength": 0.2
+      },
+      "pi_stacking": {
+        "contacts": 1,
+        "strength": 0.3
+      },
+      "salt_bridges": {
+        "contacts": 0,
+        "strength": 0.0
+      }
+    },
+    "overall_score": 0.22500000000000003,
+    "interaction_count": 4,
+    "analysis_method": "fallback"
+  },
+  "visualizations": {
+    "binding_pose": "comprehensive_test_outputs\\structure_modeling\\binding_pose_P33259.png",
+    "interaction_plot": "comprehensive_test_outputs\\structure_modeling\\interactions_P33259.png"
+  },
+  "metadata": {
+    "analysis_timestamp": "2025-07-17T16:48:06.530444",
+    "analysis_method": "comprehensive"
+  }
+}

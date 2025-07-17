@@ -1,0 +1,7 @@
+{
+  "uniprot_id": "P10635",
+  "rmsd": 2.409,
+  "binding_score": 0.4762,
+  "pose_stable": false,
+  "notes": "Enhanced structural analysis with AlphaFold-3 + PLIP integration"
+}

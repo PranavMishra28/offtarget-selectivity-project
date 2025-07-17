@@ -573,7 +573,7 @@ class ReportGenerator:
             
             # Save report
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
-            with open(output_path, 'w') as f:
+            with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(html_content)
             
             self.logger.info(f"✅ Comprehensive report generated: {output_path}")

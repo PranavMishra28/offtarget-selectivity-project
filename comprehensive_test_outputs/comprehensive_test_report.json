@@ -1,0 +1,343 @@
+{
+  "summary": {
+    "total_tests": 65,
+    "passed": 50,
+    "failed": 10,
+    "warnings": 2,
+    "info": 3,
+    "success_rate": 76.92307692307693,
+    "overall_status": "WARN",
+    "status_message": "Pipeline is mostly working but has some issues to address."
+  },
+  "detailed_results": {
+    "Python Version": {
+      "status": "PASS",
+      "details": "Python 3.11.9",
+      "timestamp": 1752785148.8698685
+    },
+    "RDKit": {
+      "status": "PASS",
+      "details": "Version: 2023.09.5",
+      "timestamp": 1752785148.9423606
+    },
+    "Pandas": {
+      "status": "PASS",
+      "details": "Version: 2.2.3",
+      "timestamp": 1752785148.9437234
+    },
+    "NumPy": {
+      "status": "PASS",
+      "details": "Version: 1.26.4",
+      "timestamp": 1752785148.9437234
+    },
+    "Plotly": {
+      "status": "PASS",
+      "details": "Version: 5.24.1",
+      "timestamp": 1752785148.9477313
+    },
+    "Structlog": {
+      "status": "PASS",
+      "details": "Structured logging available",
+      "timestamp": 1752785149.098967
+    },
+    "Aiohttp": {
+      "status": "PASS",
+      "details": "Async HTTP client available",
+      "timestamp": 1752785149.2597034
+    },
+    "PyYAML": {
+      "status": "PASS",
+      "details": "YAML configuration support",
+      "timestamp": 1752785149.2816346
+    },
+    "Config File": {
+      "status": "PASS",
+      "details": "config.yaml exists",
+      "timestamp": 1752785149.2816346
+    },
+    "API Config": {
+      "status": "PASS",
+      "details": "SwissTargetPrediction: http://www.swisstargetprediction.ch",
+      "timestamp": 1752785149.2956557
+    },
+    "Model Config": {
+      "status": "PASS",
+      "details": "Model configuration loaded",
+      "timestamp": 1752785149.2956557
+    },
+    "Pipeline Config": {
+      "status": "PASS",
+      "details": "4 scoring weights configured",
+      "timestamp": 1752785149.2956557
+    },
+    "run.run_offtarget_selectivity_pipeline": {
+      "status": "PASS",
+      "details": "Successfully imported",
+      "timestamp": 1752785150.5288982
+    },
+    "nebula.generate_library.generate_library": {
+      "status": "PASS",
+      "details": "Successfully imported",
+      "timestamp": 1752785150.5288982
+    },
+    "sparrow.triage_and_rank.compute_prioritization": {
+      "status": "PASS",
+      "details": "Successfully imported",
+      "timestamp": 1752785150.5288982
+    },
+    "empirical_binding.empirical_binding.get_empirical_offtargets": {
+      "status": "PASS",
+      "details": "Successfully imported",
+      "timestamp": 1752785150.5298693
+    },
+    "structure_modeling.structure_modeling.mock_structure_binding_analysis": {
+      "status": "PASS",
+      "details": "Successfully imported",
+      "timestamp": 1752785150.5298693
+    },
+    "impact_risk.impact_estimator.estimate_impact_risk": {
+      "status": "PASS",
+      "details": "Successfully imported",
+      "timestamp": 1752785150.5298693
+    },
+    "expression_filter.expression_filter.apply_expression_weighting": {
+      "status": "PASS",
+      "details": "Successfully imported",
+      "timestamp": 1752785150.5298693
+    },
+    "final_dashboard.generate_dashboard.generate_final_dashboard": {
+      "status": "PASS",
+      "details": "Successfully imported",
+      "timestamp": 1752785150.5298693
+    },
+    "conflict_resolution.conflict_resolution.resolve_model_conflicts": {
+      "status": "PASS",
+      "details": "Successfully imported",
+      "timestamp": 1752785150.5298693
+    },
+    "utils.config_manager.config_manager": {
+      "status": "PASS",
+      "details": "Successfully imported",
+      "timestamp": 1752785150.5298693
+    },
+    "utils.api_client.APIManager": {
+      "status": "PASS",
+      "details": "Successfully imported",
+      "timestamp": 1752785150.5298693
+    },
+    "Import Summary": {
+      "status": "INFO",
+      "details": "11/11 components imported successfully",
+      "timestamp": 1752785150.5298693
+    },
+    "Directory: nebula": {
+      "status": "PASS",
+      "details": "Created: comprehensive_test_outputs\\nebula",
+      "timestamp": 1752785150.5312455
+    },
+    "Directory: sparrow": {
+      "status": "PASS",
+      "details": "Created: comprehensive_test_outputs\\sparrow",
+      "timestamp": 1752785150.5312455
+    },
+    "Directory: empirical_binding": {
+      "status": "PASS",
+      "details": "Created: comprehensive_test_outputs\\empirical_binding",
+      "timestamp": 1752785150.5322614
+    },
+    "Directory: structure_modeling": {
+      "status": "PASS",
+      "details": "Created: comprehensive_test_outputs\\structure_modeling",
+      "timestamp": 1752785150.570229
+    },
+    "Directory: impact_risk": {
+      "status": "PASS",
+      "details": "Created: comprehensive_test_outputs\\impact_risk",
+      "timestamp": 1752785150.5713747
+    },
+    "Directory: expression_filter": {
+      "status": "PASS",
+      "details": "Created: comprehensive_test_outputs\\expression_filter",
+      "timestamp": 1752785150.5713747
+    },
+    "Directory: final_dashboard": {
+      "status": "PASS",
+      "details": "Created: comprehensive_test_outputs\\final_dashboard",
+      "timestamp": 1752785150.5713747
+    },
+    "Directory: conflict_resolution": {
+      "status": "PASS",
+      "details": "Created: comprehensive_test_outputs\\conflict_resolution",
+      "timestamp": 1752785150.5725408
+    },
+    "Data Directory": {
+      "status": "PASS",
+      "details": "GTEx data directory created",
+      "timestamp": 1752785150.5725408
+    },
+    "NEBULA": {
+      "status": "PASS",
+      "details": "Component functionality verified",
+      "timestamp": 1752785150.823829
+    },
+    "SPARROW": {
+      "status": "FAIL",
+      "details": "Component functionality failed",
+      "timestamp": 1752785151.2919905
+    },
+    "Empirical Binding": {
+      "status": "PASS",
+      "details": "Component functionality verified",
+      "timestamp": 1752785285.795375
+    },
+    "Structure Modeling": {
+      "status": "PASS",
+      "details": "Component functionality verified",
+      "timestamp": 1752785286.5333345
+    },
+    "IMPACT Risk": {
+      "status": "FAIL",
+      "details": "Component functionality failed",
+      "timestamp": 1752785286.5363405
+    },
+    "Expression Filter": {
+      "status": "FAIL",
+      "details": "Component functionality failed",
+      "timestamp": 1752785286.9167736
+    },
+    "Final Dashboard": {
+      "status": "FAIL",
+      "details": "Component functionality failed",
+      "timestamp": 1752785288.1597435
+    },
+    "Conflict Resolution": {
+      "status": "FAIL",
+      "details": "Component functionality failed",
+      "timestamp": 1752785288.1741588
+    },
+    "Component Summary": {
+      "status": "INFO",
+      "details": "3/8 components working correctly",
+      "timestamp": 1752785288.1741588
+    },
+    "Full Pipeline": {
+      "status": "FAIL",
+      "details": "Pipeline execution failed: 'NoneType' object does not support item assignment",
+      "timestamp": 1752785486.5406837
+    },
+    "File: nebula/generated_library.sdf": {
+      "status": "WARN",
+      "details": "SDF file with generated molecules (empty file)",
+      "timestamp": 1752785486.5416837
+    },
+    "File: nebula/generation_metadata.json": {
+      "status": "PASS",
+      "details": "NEBULA generation metadata (17747 bytes)",
+      "timestamp": 1752785486.5416837
+    },
+    "File: sparrow/ranked_candidates.csv": {
+      "status": "PASS",
+      "details": "SPARROW synthesis rankings (210 bytes)",
+      "timestamp": 1752785486.5416837
+    },
+    "File: sparrow/synthesis_analysis.json": {
+      "status": "PASS",
+      "details": "SPARROW analysis metadata (137 bytes)",
+      "timestamp": 1752785486.5416837
+    },
+    "File: empirical_binding/offtarget_predictions.json": {
+      "status": "PASS",
+      "details": "Empirical binding predictions (872 bytes)",
+      "timestamp": 1752785486.5416837
+    },
+    "File: empirical_binding/prediction_metadata.json": {
+      "status": "PASS",
+      "details": "Empirical binding metadata (12447 bytes)",
+      "timestamp": 1752785486.5416837
+    },
+    "File: structure_modeling/binding_risk.json": {
+      "status": "PASS",
+      "details": "Structural binding risk (181 bytes)",
+      "timestamp": 1752785486.5430892
+    },
+    "File: structure_modeling/binding_pose.png": {
+      "status": "FAIL",
+      "details": "Binding pose visualization (not found)",
+      "timestamp": 1752785486.5430892
+    },
+    "File: impact_risk/impact_summary.json": {
+      "status": "FAIL",
+      "details": "IMPACT risk summary (not found)",
+      "timestamp": 1752785486.5430892
+    },
+    "File: impact_risk/detailed_analysis.json": {
+      "status": "FAIL",
+      "details": "IMPACT detailed analysis (not found)",
+      "timestamp": 1752785486.5430892
+    },
+    "File: expression_filter/tissue_weighted_risk.json": {
+      "status": "PASS",
+      "details": "Tissue-weighted risk (21 bytes)",
+      "timestamp": 1752785486.5430892
+    },
+    "File: expression_filter/expression_analysis.json": {
+      "status": "PASS",
+      "details": "Expression analysis metadata (1942 bytes)",
+      "timestamp": 1752785486.5430892
+    },
+    "File: final_dashboard/compound_summary.json": {
+      "status": "PASS",
+      "details": "Final compound summary (3605 bytes)",
+      "timestamp": 1752785486.5430892
+    },
+    "File: final_dashboard/comprehensive_report.html": {
+      "status": "PASS",
+      "details": "Comprehensive dashboard (15273 bytes)",
+      "timestamp": 1752785486.5430892
+    },
+    "File: conflict_resolution/conflict_summary.json": {
+      "status": "PASS",
+      "details": "Conflict resolution summary (5068 bytes)",
+      "timestamp": 1752785486.5442348
+    },
+    "File Validation": {
+      "status": "INFO",
+      "details": "11/15 files generated successfully",
+      "timestamp": 1752785486.5442348
+    },
+    "Data Quality": {
+      "status": "FAIL",
+      "details": "Data quality validation error: File error: Invalid input file comprehensive_test_outputs\\nebula/generated_library.sdf",
+      "timestamp": 1752785486.5452769
+    },
+    "Execution Time": {
+      "status": "WARN",
+      "details": "Slow execution: 337.7 seconds",
+      "timestamp": 1752785486.5452769
+    },
+    "Memory Usage": {
+      "status": "PASS",
+      "details": "Memory usage: 663.3 MB",
+      "timestamp": 1752785486.5579987
+    },
+    "Disk Usage": {
+      "status": "PASS",
+      "details": "Output size: 23.7 MB",
+      "timestamp": 1752785486.56152
+    },
+    "Invalid SMILES": {
+      "status": "PASS",
+      "details": "Handled invalid SMILES: RuntimeError",
+      "timestamp": 1752785486.56152
+    },
+    "Invalid UniProt ID": {
+      "status": "PASS",
+      "details": "Handled invalid UniProt ID: RuntimeError",
+      "timestamp": 1752785486.5630002
+    }
+  },
+  "timestamp": 1752785486.566896,
+  "test_molecule": "CC(=O)OC1=CC=CC=C1C(=O)O",
+  "primary_target": "P33259",
+  "output_directory": "comprehensive_test_outputs"
+}

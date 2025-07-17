@@ -1,0 +1,194 @@
+{
+    "E7EMT8": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "E7ESS9": {
+        "empirical_score": 1.0,
+        "structural_score": 0.0,
+        "delta": 1.0,
+        "relation": "conflict"
+    },
+    "P23219": {
+        "empirical_score": 0.75,
+        "structural_score": 0.0,
+        "delta": 0.75,
+        "relation": "conflict"
+    },
+    "O94975": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "B2RXH2": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "A8K802": {
+        "empirical_score": 1.0,
+        "structural_score": 0.0,
+        "delta": 1.0,
+        "relation": "conflict"
+    },
+    "P29274": {
+        "empirical_score": 0.45,
+        "structural_score": 0.0,
+        "delta": 0.45,
+        "relation": "conflict"
+    },
+    "P08908": {
+        "empirical_score": 0.42,
+        "structural_score": 0.0,
+        "delta": 0.42,
+        "relation": "conflict"
+    },
+    "P23197": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "P0DTD1": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "B3KMM8": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "P05177": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "P28223": {
+        "empirical_score": 0.58,
+        "structural_score": 0.0,
+        "delta": 0.58,
+        "relation": "conflict"
+    },
+    "P05979": {
+        "empirical_score": 1.0,
+        "structural_score": 0.0,
+        "delta": 1.0,
+        "relation": "conflict"
+    },
+    "P21918": {
+        "empirical_score": 0.71,
+        "structural_score": 0.0,
+        "delta": 0.71,
+        "relation": "conflict"
+    },
+    "Q5H927": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "P27695": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "B2R7G2": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "P11712": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "A0PJ95": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "B4DI32": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "A8K2G5": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "P35354": {
+        "empirical_score": 0.65,
+        "structural_score": 0.0,
+        "delta": 0.65,
+        "relation": "conflict"
+    },
+    "P05184": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "P33259": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    },
+    "A7YWD4": {
+        "empirical_score": 1.0,
+        "structural_score": 0.0,
+        "delta": 1.0,
+        "relation": "conflict"
+    },
+    "Q2G036": {
+        "empirical_score": 0.7037037014961243,
+        "structural_score": 0.0,
+        "delta": 0.7037,
+        "relation": "conflict"
+    },
+    "P08172": {
+        "empirical_score": 0.82,
+        "structural_score": 0.0,
+        "delta": 0.82,
+        "relation": "conflict"
+    },
+    "A0PJW2": {
+        "empirical_score": 1.0,
+        "structural_score": 0.0,
+        "delta": 1.0,
+        "relation": "conflict"
+    },
+    "P10635": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.4762,
+        "delta": 0.3809,
+        "relation": "conflict"
+    },
+    "P41594": {
+        "empirical_score": 0.38,
+        "structural_score": 0.0,
+        "delta": 0.38,
+        "relation": "conflict"
+    },
+    "B4E2A5": {
+        "empirical_score": 0.8571428656578064,
+        "structural_score": 0.0,
+        "delta": 0.8571,
+        "relation": "conflict"
+    }
+}

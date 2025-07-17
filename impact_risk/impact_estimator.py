@@ -314,7 +314,7 @@ class SafetyProfiler:
             "rotatable_bonds": Descriptors.NumRotatableBonds(mol),
             "rings": Descriptors.RingCount(mol),
             "aromatic_rings": Descriptors.NumAromaticRings(mol),
-            "sp3_fraction": Descriptors.FractionCsp3(mol),
+            "sp3_fraction": rdMolDescriptors.FractionCsp3(mol),
             "lipinski_violations": self._count_lipinski_violations(mol),
             "veber_violations": self._count_veber_violations(mol)
         }

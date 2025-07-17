@@ -341,7 +341,7 @@ class StructuralBindingAnalyzer:
         self.logger.info(f"Generating visualizations for {uniprot_id}")
         
         # Binding pose image
-        pose_image_path = os.path.join(output_dir, f"binding_pose_{uniprot_id}.png")
+        pose_image_path = os.path.join(output_dir, "binding_pose.png")
         pose_image = self.visualizer.generate_binding_pose_image(smiles, pose_image_path)
         
         # Interaction plot

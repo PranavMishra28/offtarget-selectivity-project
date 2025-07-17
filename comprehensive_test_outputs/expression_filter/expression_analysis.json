@@ -1,0 +1,73 @@
+{
+  "input_scores": {
+    "P33259": 0.8
+  },
+  "weighted_results": {
+    "P33259": {
+      "uniprot_id": "P33259",
+      "original_score": 0.8,
+      "tissue_weighted_score": 0.8,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.8,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "P33259",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    }
+  },
+  "expression_analysis": {
+    "P33259": {
+      "uniprot_id": "P33259",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    }
+  },
+  "statistics": {
+    "total_targets": 1,
+    "mean_weight": 1.0,
+    "max_weight": 1.0,
+    "min_weight": 1.0,
+    "mean_expression": 0.0,
+    "mean_specificity": 0.0
+  },
+  "visualizations": {
+    "expression_heatmap": "expression_filter/expression_visualizations\\expression_heatmap.png",
+    "risk_comparison": "expression_filter/expression_visualizations\\risk_comparison.png"
+  },
+  "metadata": {
+    "analysis_timestamp": "2025-07-17T16:48:06.915772",
+    "analysis_method": "enhanced_expression_weighting"
+  }
+}

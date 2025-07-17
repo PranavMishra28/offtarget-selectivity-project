@@ -246,6 +246,81 @@ tissue_weights:
 
 ---
 
+## Testing & Validation
+
+This repository includes a comprehensive, automated test suite and clear guidelines for validating all pipeline components, outputs, and the interactive dashboard UI.
+
+### 1. Run the Comprehensive Test Suite
+
+The main test script is `comprehensive_test.py`. It validates:
+
+- All core pipeline components (NEBULA, SPARROW, Empirical Binding, Structure Modeling, IMPACT, Expression Filter, Dashboard, Conflict Resolution)
+- Output file generation and data quality
+- UI/dashboard rendering and static assets
+- Error handling and edge cases
+
+**To run the full test suite:**
+
+```bash
+python comprehensive_test.py
+```
+
+- All outputs will be written to `comprehensive_test_outputs/`.
+- A detailed test report is saved as `comprehensive_test_outputs/comprehensive_test_report.json`.
+
+### 2. Output & Data Quality Validation
+
+The test suite automatically checks:
+
+- That all expected output files are generated and non-empty
+- That SDF, CSV, and JSON files are valid and parseable
+- That key metrics and summary statistics are present
+
+You can also manually inspect outputs in the respective subdirectories (see Output Structure above).
+
+### 3. UI & Dashboard Testing
+
+The dashboard and all interactive visualizations are generated in `final_dashboard/`.
+
+**To test the dashboard UI:**
+
+1. Open `final_dashboard/dashboard_index.html` in your web browser.
+2. Check that all links, tabs, and navigation work.
+3. Verify that all interactive charts (Plotly, etc.) render and respond to user input.
+4. Confirm that static images (e.g., `summary_dashboard.png`, `binding_pose.png`) are present and display correctly.
+5. Review the comprehensive HTML report: `final_dashboard/comprehensive_report.html`.
+
+**Automated UI checks:**
+
+- The test suite verifies that all dashboard files are generated and non-empty.
+- For advanced UI testing, consider using browser automation tools (e.g., Selenium, Playwright) to script user interactions and screenshot comparisons.
+
+### 4. Interpreting Test Results
+
+- **PASS**: Component or file is present, valid, and functional.
+- **FAIL**: Component did not run, output is missing/corrupt, or a critical error occurred.
+- **WARN**: Output is present but may be empty or incomplete (e.g., due to missing API data).
+- **INFO**: Informational messages about optional outputs or performance.
+
+Review the summary at the end of the test run and consult `comprehensive_test_report.json` for detailed diagnostics.
+
+### 5. Debugging & Troubleshooting
+
+- Check the logs in the console and in the test report for error messages and stack traces.
+- Ensure all dependencies are installed and up to date (`pip install -r requirements.txt`).
+- If API endpoints are unavailable, check your internet connection and API keys/configuration.
+- For UI/dashboard issues, try a different browser or clear your cache.
+- For SDF/CSV/JSON parsing errors, inspect the files for formatting issues or missing data.
+
+### 6. Best Practices for Production Validation
+
+- Always run the full test suite before deploying or sharing results.
+- Manually review dashboard outputs for visual/UX quality.
+- Validate that all configuration and API endpoints are correct for your environment.
+- Use version control to track changes to code, config, and test outputs.
+
+---
+
 ## Advanced Usage
 
 ### Custom Configuration
