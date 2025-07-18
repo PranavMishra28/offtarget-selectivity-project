@@ -110,7 +110,7 @@
   },
   "metadata": {
     "dashboard_version": "2.0",
-    "generation_timestamp": "2025-07-17T16:51:26.523469",
+    "generation_timestamp": "2025-07-17T23:59:19.362568",
     "visualization_paths": {
       "pipeline_overview": "comprehensive_test_outputs\\final_dashboard\\pipeline_overview.html",
       "risk_assessment": "comprehensive_test_outputs\\final_dashboard\\risk_assessment.html",

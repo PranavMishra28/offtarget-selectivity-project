@@ -1,0 +1,145 @@
+{
+  "compound_info": {
+    "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+    "on_target_id": "P33259",
+    "on_target_score": 0.0
+  },
+  "selectivity_analysis": {
+    "metrics": {
+      "selectivity_score": 0.0,
+      "selectivity_index": 0.0,
+      "off_target_count": 10,
+      "avg_off_target_score": 0.6143,
+      "max_off_target_score": 0.7905,
+      "risk_distribution": {
+        "mean": 0.6143,
+        "median": 0.5572,
+        "std": 0.1198,
+        "min": 0.5143,
+        "max": 0.7905,
+        "quartiles": {
+          "q25": 0.5143,
+          "q50": 0.5572,
+          "q75": 0.7429
+        },
+        "high_risk_count": 3,
+        "medium_risk_count": 7,
+        "low_risk_count": 0
+      },
+      "selectivity_classification": "Very Poor"
+    },
+    "off_target_scores": {
+      "E7ESS9": 0.7905,
+      "Q5H927": 0.5143,
+      "P11712": 0.5143,
+      "B4DI32": 0.5143,
+      "A8K802": 0.7905,
+      "A7YWD4": 0.6,
+      "B2RXH2": 0.5143,
+      "P10635": 0.5143,
+      "P05979": 0.7905,
+      "A0PJW2": 0.6
+    },
+    "combined_scores": {
+      "E7ESS9": 0.7905,
+      "Q5H927": 0.5143,
+      "P11712": 0.5143,
+      "B4DI32": 0.5143,
+      "A8K802": 0.7905,
+      "A7YWD4": 0.6,
+      "B2RXH2": 0.5143,
+      "P10635": 0.5143,
+      "P05979": 0.7905,
+      "A0PJW2": 0.6
+    }
+  },
+  "safety_analysis": {
+    "ion_channel_risks": {
+      "herg_risk": 0.2933333333333332,
+      "nav_risk": 0.29119999999999996,
+      "ca_risk": 0.05,
+      "overall_ion_channel_risk": 0.2933333333333332,
+      "risk_level": "Low",
+      "descriptors": {
+        "molecular_weight": 180.15899999999996,
+        "logp": 1.3101,
+        "tpsa": 63.60000000000001,
+        "hbd": 1,
+        "hba": 3,
+        "aromatic_rings": 1,
+        "rotatable_bonds": 2
+      }
+    },
+    "safety_profile": {
+      "safety_properties": {
+        "molecular_weight": 180.15899999999996,
+        "logp": 1.3101,
+        "tpsa": 63.60000000000001,
+        "hbd": 1,
+        "hba": 3,
+        "rotatable_bonds": 2,
+        "rings": 1,
+        "aromatic_rings": 1,
+        "sp3_fraction": 0.1111111111111111,
+        "lipinski_violations": 0,
+        "veber_violations": 0
+      },
+      "safety_risks": {
+        "ion_channel": {
+          "herg_risk": 0.2933333333333332,
+          "nav_risk": 0.29119999999999996,
+          "ca_risk": 0.05,
+          "overall_ion_channel_risk": 0.2933333333333332,
+          "risk_level": "Low",
+          "descriptors": {
+            "molecular_weight": 180.15899999999996,
+            "logp": 1.3101,
+            "tpsa": 63.60000000000001,
+            "hbd": 1,
+            "hba": 3,
+            "aromatic_rings": 1,
+            "rotatable_bonds": 2
+          }
+        },
+        "metabolic": {
+          "risk_score": 0.2933,
+          "risk_level": "Low"
+        },
+        "genotoxicity": {
+          "risk_score": 0.2,
+          "risk_level": "Low"
+        },
+        "hepatotoxicity": {
+          "risk_score": 0.1,
+          "risk_level": "Low"
+        },
+        "cardiotoxicity": {
+          "risk_score": 0.2933,
+          "risk_level": "Low",
+          "ion_channel_contribution": 0.2933,
+          "structural_contribution": 0.0
+        }
+      },
+      "overall_safety_score": 0.7067,
+      "safety_classification": "Good"
+    }
+  },
+  "decision": {
+    "decision": "Reject",
+    "decision_score": 0.2827,
+    "recommendations": [
+      "Do not proceed with current compound",
+      "Consider alternative chemical scaffolds"
+    ],
+    "key_factors": {
+      "selectivity_score": 0.0,
+      "selectivity_index": 0.0,
+      "safety_score": 0.7067,
+      "ion_channel_risk": 0.2933333333333332
+    }
+  },
+  "metadata": {
+    "analysis_timestamp": "2025-07-17T23:58:41.168294",
+    "analysis_method": "enhanced_impact"
+  }
+}

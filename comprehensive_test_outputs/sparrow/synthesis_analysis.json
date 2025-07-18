@@ -1,6 +1,48 @@
 {
-  "CC(=O)OC1=CC=CC=C1C(=O)O": {
+  "CC(=O)Oc1ccccc1C(=O)O": {
     "synthesis_analysis": {
-      "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+      "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+      "feasibility_score": 0.6049801250000001,
+      "recommendation": "Moderately Feasible",
+      "metadata": {
+        "askcos_error": "Circuit breaker is OPEN for askcos",
+        "ibm_rxn_error": "Circuit breaker is OPEN for ibm_rxn",
+        "rule_based": true
+      },
       "routes": [
-        
+        {
+          "steps": [
+            {
+              "reaction_type": "Estimated",
+              "reagents": [],
+              "yield": 0.8
+            },
+            {
+              "reaction_type": "Estimated",
+              "reagents": [],
+              "yield": 0.8
+            }
+          ],
+          "total_cost": 1225.3676528099998,
+          "num_steps": 2,
+          "success_probability": 0.6599205,
+          "reagent_availability": 0.8,
+          "complexity_score": 0.5,
+          "feasibility_score": 0.6049801250000001
+        }
+      ]
+    },
+    "cheminformatics_analysis": {
+      "synthesis_score": 0.796947,
+      "complexity": 0.203053,
+      "factors": {
+        "size": 0.3603179999999999,
+        "lipinski_violations": 0.0,
+        "ring_complexity": 0.30000000000000004,
+        "functional_groups": 0.2,
+        "flexibility": 0.04,
+        "polarity": 0.31800000000000006
+      }
+    }
+  }
+}

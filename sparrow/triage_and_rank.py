@@ -382,8 +382,28 @@ async def compute_prioritization(
             }
             
             results.append(result)
+            # Convert SynthesisRoute objects to dictionaries for JSON serialization
+            serializable_synthesis = {
+                "smiles": synthesis_analysis["smiles"],
+                "feasibility_score": synthesis_analysis["feasibility_score"],
+                "recommendation": synthesis_analysis["recommendation"],
+                "metadata": synthesis_analysis["metadata"],
+                "routes": [
+                    {
+                        "steps": route.steps,
+                        "total_cost": route.total_cost,
+                        "num_steps": route.num_steps,
+                        "success_probability": route.success_probability,
+                        "reagent_availability": route.reagent_availability,
+                        "complexity_score": route.complexity_score,
+                        "feasibility_score": route.get_feasibility_score()
+                    }
+                    for route in synthesis_analysis["routes"]
+                ]
+            }
+            
             detailed_analysis[smiles] = {
-                "synthesis_analysis": synthesis_analysis,
+                "synthesis_analysis": serializable_synthesis,
                 "cheminformatics_analysis": chem_score
             }
             

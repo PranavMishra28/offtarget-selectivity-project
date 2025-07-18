@@ -1,0 +1,109 @@
+{
+  "compound_info": {
+    "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+    "on_target_id": "P33259",
+    "on_target_score": 0.76
+  },
+  "selectivity_analysis": {
+    "metrics": {
+      "selectivity_score": 1.0,
+      "selectivity_index": Infinity,
+      "off_target_count": 0,
+      "risk_distribution": {},
+      "selectivity_classification": "Unknown"
+    },
+    "off_target_scores": {},
+    "combined_scores": {
+      "P33259": 0.76
+    }
+  },
+  "safety_analysis": {
+    "ion_channel_risks": {
+      "herg_risk": 0.2933333333333332,
+      "nav_risk": 0.29119999999999996,
+      "ca_risk": 0.05,
+      "overall_ion_channel_risk": 0.2933333333333332,
+      "risk_level": "Low",
+      "descriptors": {
+        "molecular_weight": 180.15899999999996,
+        "logp": 1.3101,
+        "tpsa": 63.60000000000001,
+        "hbd": 1,
+        "hba": 3,
+        "aromatic_rings": 1,
+        "rotatable_bonds": 2
+      }
+    },
+    "safety_profile": {
+      "safety_properties": {
+        "molecular_weight": 180.15899999999996,
+        "logp": 1.3101,
+        "tpsa": 63.60000000000001,
+        "hbd": 1,
+        "hba": 3,
+        "rotatable_bonds": 2,
+        "rings": 1,
+        "aromatic_rings": 1,
+        "sp3_fraction": 0.1111111111111111,
+        "lipinski_violations": 0,
+        "veber_violations": 0
+      },
+      "safety_risks": {
+        "ion_channel": {
+          "herg_risk": 0.2933333333333332,
+          "nav_risk": 0.29119999999999996,
+          "ca_risk": 0.05,
+          "overall_ion_channel_risk": 0.2933333333333332,
+          "risk_level": "Low",
+          "descriptors": {
+            "molecular_weight": 180.15899999999996,
+            "logp": 1.3101,
+            "tpsa": 63.60000000000001,
+            "hbd": 1,
+            "hba": 3,
+            "aromatic_rings": 1,
+            "rotatable_bonds": 2
+          }
+        },
+        "metabolic": {
+          "risk_score": 0.2933,
+          "risk_level": "Low"
+        },
+        "genotoxicity": {
+          "risk_score": 0.2,
+          "risk_level": "Low"
+        },
+        "hepatotoxicity": {
+          "risk_score": 0.1,
+          "risk_level": "Low"
+        },
+        "cardiotoxicity": {
+          "risk_score": 0.2933,
+          "risk_level": "Low",
+          "ion_channel_contribution": 0.2933,
+          "structural_contribution": 0.0
+        }
+      },
+      "overall_safety_score": 0.7067,
+      "safety_classification": "Good"
+    }
+  },
+  "decision": {
+    "decision": "Synthesize",
+    "decision_score": 0.8827,
+    "recommendations": [
+      "Proceed with synthesis and testing",
+      "Monitor for any unexpected off-target effects"
+    ],
+    "key_factors": {
+      "selectivity_score": 1.0,
+      "selectivity_index": Infinity,
+      "safety_score": 0.7067,
+      "ion_channel_risk": 0.2933333333333332
+    }
+  },
+  "metadata": {
+    "analysis_timestamp": "2025-07-17T23:51:53.568671",
+    "analysis_method": "enhanced_impact"
+  }
+}

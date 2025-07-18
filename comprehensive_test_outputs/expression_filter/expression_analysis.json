@@ -1,17 +1,26 @@
 {
   "input_scores": {
-    "P33259": 0.8
+    "E7ESS9": 0.7905,
+    "A8K802": 0.7905,
+    "P05979": 0.7905,
+    "A7YWD4": 0.6,
+    "A0PJW2": 0.6,
+    "Q5H927": 0.5143,
+    "P11712": 0.5143,
+    "B4DI32": 0.5143,
+    "B2RXH2": 0.5143,
+    "P10635": 0.5143
   },
   "weighted_results": {
-    "P33259": {
-      "uniprot_id": "P33259",
-      "original_score": 0.8,
-      "tissue_weighted_score": 0.8,
+    "E7ESS9": {
+      "uniprot_id": "E7ESS9",
+      "original_score": 0.7905,
+      "tissue_weighted_score": 0.7905,
       "tissue_weight": 1.0,
       "mean_expression": 0.0,
       "tissue_specificity": 0.0,
       "risk_components": {
-        "base_risk": 0.8,
+        "base_risk": 0.7905,
         "tissue_weight": 1.0,
         "expression_factor": 0.0,
         "specificity_factor": 0.0,
@@ -25,7 +34,322 @@
         "critical_tissue_penalty": 0.0
       },
       "expression_data": {
-        "uniprot_id": "P33259",
+        "uniprot_id": "E7ESS9",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    },
+    "A8K802": {
+      "uniprot_id": "A8K802",
+      "original_score": 0.7905,
+      "tissue_weighted_score": 0.7905,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.7905,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "A8K802",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    },
+    "P05979": {
+      "uniprot_id": "P05979",
+      "original_score": 0.7905,
+      "tissue_weighted_score": 0.7905,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.7905,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "P05979",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    },
+    "A7YWD4": {
+      "uniprot_id": "A7YWD4",
+      "original_score": 0.6,
+      "tissue_weighted_score": 0.6,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.6,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "A7YWD4",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    },
+    "A0PJW2": {
+      "uniprot_id": "A0PJW2",
+      "original_score": 0.6,
+      "tissue_weighted_score": 0.6,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.6,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "A0PJW2",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    },
+    "Q5H927": {
+      "uniprot_id": "Q5H927",
+      "original_score": 0.5143,
+      "tissue_weighted_score": 0.5143,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.5143,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "Q5H927",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    },
+    "P11712": {
+      "uniprot_id": "P11712",
+      "original_score": 0.5143,
+      "tissue_weighted_score": 0.5143,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.5143,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "P11712",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    },
+    "B4DI32": {
+      "uniprot_id": "B4DI32",
+      "original_score": 0.5143,
+      "tissue_weighted_score": 0.5143,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.5143,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "B4DI32",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    },
+    "B2RXH2": {
+      "uniprot_id": "B2RXH2",
+      "original_score": 0.5143,
+      "tissue_weighted_score": 0.5143,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.5143,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "B2RXH2",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    },
+    "P10635": {
+      "uniprot_id": "P10635",
+      "original_score": 0.5143,
+      "tissue_weighted_score": 0.5143,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.5143,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "P10635",
         "gtex": {},
         "hpa": {},
         "tissue": {},
@@ -40,8 +364,125 @@
     }
   },
   "expression_analysis": {
-    "P33259": {
-      "uniprot_id": "P33259",
+    "E7ESS9": {
+      "uniprot_id": "E7ESS9",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    },
+    "A8K802": {
+      "uniprot_id": "A8K802",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    },
+    "P05979": {
+      "uniprot_id": "P05979",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    },
+    "A7YWD4": {
+      "uniprot_id": "A7YWD4",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    },
+    "A0PJW2": {
+      "uniprot_id": "A0PJW2",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    },
+    "Q5H927": {
+      "uniprot_id": "Q5H927",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    },
+    "P11712": {
+      "uniprot_id": "P11712",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    },
+    "B4DI32": {
+      "uniprot_id": "B4DI32",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    },
+    "B2RXH2": {
+      "uniprot_id": "B2RXH2",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    },
+    "P10635": {
+      "uniprot_id": "P10635",
       "gtex": {},
       "hpa": {},
       "tissue": {},
@@ -55,7 +496,7 @@
     }
   },
   "statistics": {
-    "total_targets": 1,
+    "total_targets": 10,
     "mean_weight": 1.0,
     "max_weight": 1.0,
     "min_weight": 1.0,
@@ -63,11 +504,11 @@
     "mean_specificity": 0.0
   },
   "visualizations": {
-    "expression_heatmap": "expression_filter/expression_visualizations\\expression_heatmap.png",
-    "risk_comparison": "expression_filter/expression_visualizations\\risk_comparison.png"
+    "expression_heatmap": "comprehensive_test_outputs\\expression_filter/expression_visualizations\\expression_heatmap.png",
+    "risk_comparison": "comprehensive_test_outputs\\expression_filter/expression_visualizations\\risk_comparison.png"
   },
   "metadata": {
-    "analysis_timestamp": "2025-07-17T16:48:06.915772",
+    "analysis_timestamp": "2025-07-17T23:59:18.261071",
     "analysis_method": "enhanced_expression_weighting"
   }
 }

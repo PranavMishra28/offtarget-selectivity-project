@@ -48,11 +48,11 @@
     "analysis_method": "fallback"
   },
   "visualizations": {
-    "binding_pose": "comprehensive_test_outputs\\structure_modeling\\binding_pose_E7ESS9.png",
+    "binding_pose": "comprehensive_test_outputs\\structure_modeling\\binding_pose.png",
     "interaction_plot": "comprehensive_test_outputs\\structure_modeling\\interactions_E7ESS9.png"
   },
   "metadata": {
-    "analysis_timestamp": "2025-07-17T16:50:23.631405",
+    "analysis_timestamp": "2025-07-17T23:54:49.388919",
     "analysis_method": "comprehensive"
   }
 }

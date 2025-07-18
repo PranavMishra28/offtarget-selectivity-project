@@ -87,16 +87,27 @@ class ExpressionDataManager:
     
     def _clean_expression_data(self, data: pd.DataFrame) -> pd.DataFrame:
         """Clean and normalize expression data"""
-        # Remove genes with all zero expression
-        data = data.loc[data.sum(axis=1) > 0]
-        
-        # Log2 transform (add small constant to avoid log(0))
-        data = np.log2(data + 1)
-        
-        # Remove outliers (genes with extremely high expression)
-        data = data.clip(upper=data.quantile(0.99, axis=1), axis=1)
-        
-        return data
+        try:
+            # Convert to numeric, coercing errors to NaN
+            data = data.apply(pd.to_numeric, errors='coerce')
+            
+            # Remove genes with all zero expression
+            data = data.loc[data.sum(axis=1) > 0]
+            
+            # Fill NaN values with 0
+            data = data.fillna(0)
+            
+            # Log2 transform (add small constant to avoid log(0))
+            data = np.log2(data + 1)
+            
+            # Remove outliers (genes with extremely high expression)
+            data = data.clip(upper=data.quantile(0.99, axis=1), axis=1)
+            
+            return data
+        except Exception as e:
+            self.logger.error(f"Error cleaning expression data: {e}")
+            # Return empty DataFrame if cleaning fails
+            return pd.DataFrame()
     
     def _create_mock_hpa_data(self) -> pd.DataFrame:
         """Create mock HPA expression data"""
@@ -552,4 +563,4 @@ async def apply_expression_weighting(
     logger.info(f"📄 Detailed analysis: {metadata_path}")
     logger.info(f"🖼 Visualizations: {visualization_path}")
     
-    return legacy_results
+    return {"weighted_risks": legacy_results}

@@ -16,7 +16,7 @@
   },
   "docking_analysis": {
     "docking_score": -6.217,
-    "rmsd": 2.331,
+    "rmsd": 1.454,
     "pose_stable": false,
     "binding_affinity": 6.217,
     "confidence": 1.0,
@@ -48,11 +48,11 @@
     "analysis_method": "fallback"
   },
   "visualizations": {
-    "binding_pose": "comprehensive_test_outputs\\structure_modeling\\binding_pose_P33259.png",
+    "binding_pose": "comprehensive_test_outputs\\structure_modeling\\binding_pose.png",
     "interaction_plot": "comprehensive_test_outputs\\structure_modeling\\interactions_P33259.png"
   },
   "metadata": {
-    "analysis_timestamp": "2025-07-17T16:48:06.530444",
+    "analysis_timestamp": "2025-07-17T23:51:53.562189",
     "analysis_method": "comprehensive"
   }
 }

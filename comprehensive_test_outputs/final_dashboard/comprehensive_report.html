@@ -22,7 +22,7 @@
             <div class="header">
                 <h1>🧪 Off-Target Selectivity Analysis Report</h1>
                 <p>Comprehensive analysis of compound selectivity, safety, and synthesis feasibility</p>
-                <p><strong>Generated:</strong> 2025-07-17 16:51:26</p>
+                <p><strong>Generated:</strong> 2025-07-17 23:59:19</p>
             </div>
             
             <div class="section">
@@ -84,7 +84,92 @@
                 <h2>📋 Detailed Results</h2>
                 <pre>{
   "nebula": {
-    "status": "not_found"
+    "input_smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+    "generation_config": {
+      "library": "moses",
+      "num_variants": 5,
+      "novelty_threshold": 0.7,
+      "validity_check": true,
+      "pains_filter": true
+    },
+    "generation_stats": {
+      "total_generated": 5,
+      "valid_molecules": 5,
+      "conformers_generated": 15,
+      "validation_rate": 1.0
+    },
+    "validation_results": [
+      {
+        "valid": true,
+        "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+        "molecular_weight": 180.15899999999996,
+        "logp": 1.3101,
+        "hbd": 1,
+        "hba": 3,
+        "rotatable_bonds": 2,
+        "rings": 1,
+        "aromatic_rings": 1,
+        "pains_filter": false,
+        "lipinski_violations": 0,
+        "reason": null
+      },
+      {
+        "valid": true,
+        "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+        "molecular_weight": 180.15899999999996,
+        "logp": 1.3101,
+        "hbd": 1,
+        "hba": 3,
+        "rotatable_bonds": 2,
+        "rings": 1,
+        "aromatic_rings": 1,
+        "pains_filter": false,
+        "lipinski_violations": 0,
+        "reason": null
+      },
+      {
+        "valid": true,
+        "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+        "molecular_weight": 180.15899999999996,
+        "logp": 1.3101,
+        "hbd": 1,
+        "hba": 3,
+        "rotatable_bonds": 2,
+        "rings": 1,
+        "aromatic_rings": 1,
+        "pains_filter": false,
+        "lipinski_violations": 0,
+        "reason": null
+      },
+      {
+        "valid": true,
+        "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+        "molecular_weight": 180.15899999999996,
+        "logp": 1.3101,
+        "hbd": 1,
+        "hba": 3,
+        "rotatable_bonds": 2,
+        "rings": 1,
+        "aromatic_rings": 1,
+        "pains_filter": false,
+        "lipinski_violations": 0,
+        "reason": null
+      },
+      {
+        "valid": true,
+        "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+        "molecular_weight": 180.15899999999996,
+        "logp": 1.3101,
+        "hbd": 1,
+        "hba": 3,
+        "rotatable_bonds": 2,
+        "rings": 1,
+        "aromatic_rings": 1,
+        "pains_filter": false,
+        "lipinski_violations": 0,
+        "reason": null
+      }
+    ]
   },
   "sparrow": {
     "status": "loaded",
@@ -296,6 +381,115 @@
         }
       ],
       "decision_flag": "Watch"
+    },
+    "detailed": {
+      "compound_info": {
+        "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+        "on_target_id": "P33259",
+        "on_target_score": 0.76
+      },
+      "selectivity_analysis": {
+        "metrics": {
+          "selectivity_score": 1.0,
+          "selectivity_index": Infinity,
+          "off_target_count": 0,
+          "risk_distribution": {},
+          "selectivity_classification": "Unknown"
+        },
+        "off_target_scores": {},
+        "combined_scores": {
+          "P33259": 0.76
+        }
+      },
+      "safety_analysis": {
+        "ion_channel_risks": {
+          "herg_risk": 0.2933333333333332,
+          "nav_risk": 0.29119999999999996,
+          "ca_risk": 0.05,
+          "overall_ion_channel_risk": 0.2933333333333332,
+          "risk_level": "Low",
+          "descriptors": {
+            "molecular_weight": 180.15899999999996,
+            "logp": 1.3101,
+            "tpsa": 63.60000000000001,
+            "hbd": 1,
+            "hba": 3,
+            "aromatic_rings": 1,
+            "rotatable_bonds": 2
+          }
+        },
+        "safety_profile": {
+          "safety_properties": {
+            "molecular_weight": 180.15899999999996,
+            "logp": 1.3101,
+            "tpsa": 63.60000000000001,
+            "hbd": 1,
+            "hba": 3,
+            "rotatable_bonds": 2,
+            "rings": 1,
+            "aromatic_rings": 1,
+            "sp3_fraction": 0.1111111111111111,
+            "lipinski_violations": 0,
+            "veber_violations": 0
+          },
+          "safety_risks": {
+            "ion_channel": {
+              "herg_risk": 0.2933333333333332,
+              "nav_risk": 0.29119999999999996,
+              "ca_risk": 0.05,
+              "overall_ion_channel_risk": 0.2933333333333332,
+              "risk_level": "Low",
+              "descriptors": {
+                "molecular_weight": 180.15899999999996,
+                "logp": 1.3101,
+                "tpsa": 63.60000000000001,
+                "hbd": 1,
+                "hba": 3,
+                "aromatic_rings": 1,
+                "rotatable_bonds": 2
+              }
+            },
+            "metabolic": {
+              "risk_score": 0.2933,
+              "risk_level": "Low"
+            },
+            "genotoxicity": {
+              "risk_score": 0.2,
+              "risk_level": "Low"
+            },
+            "hepatotoxicity": {
+              "risk_score": 0.1,
+              "risk_level": "Low"
+            },
+            "cardiotoxicity": {
+              "risk_score": 0.2933,
+              "risk_level": "Low",
+              "ion_channel_contribution": 0.2933,
+              "structural_contribution": 0.0
+            }
+          },
+          "overall_safety_score": 0.7067,
+          "safety_classification": "Good"
+        }
+      },
+      "decision": {
+        "decision": "Synthesize",
+        "decision_score": 0.8827,
+        "recommendations": [
+          "Proceed with synthesis and testing",
+          "Monitor for any unexpected off-target effects"
+        ],
+        "key_factors": {
+          "selectivity_score": 1.0,
+          "selectivity_index": Infinity,
+          "safety_score": 0.7067,
+          "ion_channel_risk": 0.2933333333333332
+        }
+      },
+      "metadata": {
+        "analysis_timestamp": "2025-07-17T23:51:53.568671",
+        "analysis_method": "enhanced_impact"
+      }
     }
   },
   "expression_filter": {
@@ -489,7 +683,7 @@
     }
   },
   "metadata": {
-    "aggregation_timestamp": "2025-07-17T16:51:25.694022",
+    "aggregation_timestamp": "2025-07-17T23:59:18.322097",
     "pipeline_version": "2.0",
     "data_sources": [
       "nebula",

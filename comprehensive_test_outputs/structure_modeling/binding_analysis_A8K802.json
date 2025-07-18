@@ -48,11 +48,11 @@
     "analysis_method": "fallback"
   },
   "visualizations": {
-    "binding_pose": "comprehensive_test_outputs\\structure_modeling\\binding_pose_A8K802.png",
+    "binding_pose": "comprehensive_test_outputs\\structure_modeling\\binding_pose.png",
     "interaction_plot": "comprehensive_test_outputs\\structure_modeling\\interactions_A8K802.png"
   },
   "metadata": {
-    "analysis_timestamp": "2025-07-17T16:50:24.013182",
+    "analysis_timestamp": "2025-07-17T23:54:49.891938",
     "analysis_method": "comprehensive"
   }
 }

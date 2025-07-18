@@ -2,7 +2,7 @@
   "input_smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
   "prediction_config": {
     "min_confidence": 0.3,
-    "max_results": 50
+    "max_results": 10
   },
   "source_predictions": {
     "swiss_target_prediction": [],
@@ -430,7 +430,7 @@
     "total_predictions": 39,
     "unique_targets": 32,
     "filtered_targets": 32,
-    "final_targets": 32
+    "final_targets": 10
   },
   "top_predictions": [
     {

@@ -314,7 +314,7 @@ class SafetyProfiler:
             "rotatable_bonds": Descriptors.NumRotatableBonds(mol),
             "rings": Descriptors.RingCount(mol),
             "aromatic_rings": Descriptors.NumAromaticRings(mol),
-            "sp3_fraction": rdMolDescriptors.FractionCsp3(mol),
+            "sp3_fraction": self._calculate_sp3_fraction(mol),
             "lipinski_violations": self._count_lipinski_violations(mol),
             "veber_violations": self._count_veber_violations(mol)
         }
@@ -462,6 +462,28 @@ class SafetyProfiler:
             violations += 1
         
         return violations
+    
+    def _calculate_sp3_fraction(self, mol: Chem.Mol) -> float:
+        """Calculate sp3 fraction manually since FractionCsp3 may not be available"""
+        try:
+            # Try to use the built-in function first
+            return rdMolDescriptors.FractionCsp3(mol)
+        except AttributeError:
+            # Fallback calculation
+            total_carbons = 0
+            sp3_carbons = 0
+            
+            for atom in mol.GetAtoms():
+                if atom.GetSymbol() == 'C':
+                    total_carbons += 1
+                    # Check if it's sp3 hybridized (4 single bonds)
+                    if atom.GetTotalNumHs() + atom.GetDegree() == 4:
+                        sp3_carbons += 1
+            
+            if total_carbons == 0:
+                return 0.0
+            
+            return sp3_carbons / total_carbons
     
     def _empty_safety_profile(self) -> Dict[str, Any]:
         """Empty safety profile for invalid molecules"""
