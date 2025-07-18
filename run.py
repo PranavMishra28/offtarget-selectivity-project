@@ -118,7 +118,7 @@ class PipelineExecutor:
         try:
             result = generate_library(
                 input_smiles=smiles,
-                num_variants=20,  # Reduced for faster execution
+                num_variants=10,  # Further reduced for faster execution
                 output_path=os.path.join(output_base_dir, "nebula/generated_library.sdf"),
                 metadata_path=os.path.join(output_base_dir, "nebula/generation_metadata.json")
             )
@@ -169,7 +169,7 @@ class PipelineExecutor:
                 output_path=os.path.join(output_base_dir, "empirical_binding/offtarget_predictions.json"),
                 metadata_path=os.path.join(output_base_dir, "empirical_binding/prediction_metadata.json"),
                 min_confidence=0.3,
-                max_results=10  # Further reduced for faster execution
+                max_results=5  # Minimal for fastest execution
             )
             
             self.results["empirical_binding"] = {
@@ -195,7 +195,7 @@ class PipelineExecutor:
             targets = list(empirical_data.get("predictions", {}).keys())
             
             structural_scores = {}
-            for target in targets[:3]:  # Further reduced for faster execution
+            for target in targets[:2]:  # Minimal for fastest execution
                 try:
                     result = await mock_structure_binding_analysis(
                         smiles=smiles,

@@ -2,7 +2,7 @@
   "input_smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
   "prediction_config": {
     "min_confidence": 0.3,
-    "max_results": 10
+    "max_results": 5
   },
   "source_predictions": {
     "swiss_target_prediction": [],
@@ -430,7 +430,7 @@
     "total_predictions": 39,
     "unique_targets": 32,
     "filtered_targets": 32,
-    "final_targets": 10
+    "final_targets": 5
   },
   "top_predictions": [
     {
@@ -452,26 +452,6 @@
     {
       "uniprot_id": "A0PJW2",
       "score": 1.0
-    },
-    {
-      "uniprot_id": "B4DI32",
-      "score": 0.8571428656578064
-    },
-    {
-      "uniprot_id": "Q5H927",
-      "score": 0.8571428656578064
-    },
-    {
-      "uniprot_id": "B2RXH2",
-      "score": 0.8571428656578064
-    },
-    {
-      "uniprot_id": "P11712",
-      "score": 0.8571428656578064
-    },
-    {
-      "uniprot_id": "P10635",
-      "score": 0.8571428656578064
     }
   ]
 }

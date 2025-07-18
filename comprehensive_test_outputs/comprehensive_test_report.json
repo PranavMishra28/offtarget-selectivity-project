@@ -1,11 +1,11 @@
 {
   "summary": {
-    "total_tests": 71,
-    "passed": 67,
+    "total_tests": 84,
+    "passed": 81,
     "failed": 0,
-    "warnings": 1,
+    "warnings": 0,
     "info": 3,
-    "success_rate": 94.36619718309859,
+    "success_rate": 96.42857142857143,
     "overall_status": "PASS",
     "status_message": "Pipeline is working correctly and ready for use!"
   },
@@ -13,360 +13,425 @@
     "Python Version": {
       "status": "PASS",
       "details": "Python 3.11.9",
-      "timestamp": 1752810573.9216533
+      "timestamp": 1752816754.7430983
     },
     "RDKit": {
       "status": "PASS",
       "details": "Version: 2023.09.5",
-      "timestamp": 1752810574.0292826
+      "timestamp": 1752816754.8668423
     },
     "Pandas": {
       "status": "PASS",
       "details": "Version: 2.2.3",
-      "timestamp": 1752810574.0292826
+      "timestamp": 1752816754.8668423
     },
     "NumPy": {
       "status": "PASS",
       "details": "Version: 1.26.4",
-      "timestamp": 1752810574.0292826
+      "timestamp": 1752816754.8668423
     },
     "Plotly": {
       "status": "PASS",
       "details": "Version: 5.24.1",
-      "timestamp": 1752810574.0377529
+      "timestamp": 1752816754.8787365
     },
     "Structlog": {
       "status": "PASS",
       "details": "Structured logging available",
-      "timestamp": 1752810574.2537565
+      "timestamp": 1752816755.300398
     },
     "Aiohttp": {
       "status": "PASS",
       "details": "Async HTTP client available",
-      "timestamp": 1752810574.4804718
+      "timestamp": 1752816755.5683312
     },
     "PyYAML": {
       "status": "PASS",
       "details": "YAML configuration support",
-      "timestamp": 1752810574.5128279
+      "timestamp": 1752816755.6077762
     },
     "Config File": {
       "status": "PASS",
       "details": "config.yaml exists",
-      "timestamp": 1752810574.513828
+      "timestamp": 1752816755.6077762
     },
     "API Config": {
       "status": "PASS",
       "details": "SwissTargetPrediction: http://www.swisstargetprediction.ch",
-      "timestamp": 1752810574.530093
+      "timestamp": 1752816755.6276903
     },
     "Model Config": {
       "status": "PASS",
       "details": "Model configuration loaded",
-      "timestamp": 1752810574.5310955
+      "timestamp": 1752816755.6276903
     },
     "Pipeline Config": {
       "status": "PASS",
       "details": "4 scoring weights configured",
-      "timestamp": 1752810574.5310955
+      "timestamp": 1752816755.6276903
     },
     "run.run_offtarget_selectivity_pipeline": {
       "status": "PASS",
       "details": "Successfully imported",
-      "timestamp": 1752810576.5769193
+      "timestamp": 1752816757.9622667
     },
     "nebula.generate_library.generate_library": {
       "status": "PASS",
       "details": "Successfully imported",
-      "timestamp": 1752810576.5769193
+      "timestamp": 1752816757.9622667
     },
     "sparrow.triage_and_rank.compute_prioritization": {
       "status": "PASS",
       "details": "Successfully imported",
-      "timestamp": 1752810576.5769193
+      "timestamp": 1752816757.9622667
     },
     "empirical_binding.empirical_binding.get_empirical_offtargets": {
       "status": "PASS",
       "details": "Successfully imported",
-      "timestamp": 1752810576.5769193
+      "timestamp": 1752816757.9622667
     },
     "structure_modeling.structure_modeling.mock_structure_binding_analysis": {
       "status": "PASS",
       "details": "Successfully imported",
-      "timestamp": 1752810576.5769193
+      "timestamp": 1752816757.9622667
     },
     "impact_risk.impact_estimator.estimate_impact_risk": {
       "status": "PASS",
       "details": "Successfully imported",
-      "timestamp": 1752810576.5769193
+      "timestamp": 1752816757.9622667
     },
     "expression_filter.expression_filter.apply_expression_weighting": {
       "status": "PASS",
       "details": "Successfully imported",
-      "timestamp": 1752810576.578272
+      "timestamp": 1752816757.9622667
     },
     "final_dashboard.generate_dashboard.generate_final_dashboard": {
       "status": "PASS",
       "details": "Successfully imported",
-      "timestamp": 1752810576.578272
+      "timestamp": 1752816757.9622667
     },
     "conflict_resolution.conflict_resolution.resolve_model_conflicts": {
       "status": "PASS",
       "details": "Successfully imported",
-      "timestamp": 1752810576.578272
+      "timestamp": 1752816757.9622667
     },
     "utils.config_manager.config_manager": {
       "status": "PASS",
       "details": "Successfully imported",
-      "timestamp": 1752810576.578272
+      "timestamp": 1752816757.9622667
     },
     "utils.api_client.APIManager": {
       "status": "PASS",
       "details": "Successfully imported",
-      "timestamp": 1752810576.578272
+      "timestamp": 1752816757.9622667
     },
     "Import Summary": {
       "status": "INFO",
       "details": "11/11 components imported successfully",
-      "timestamp": 1752810576.578272
+      "timestamp": 1752816757.9622667
     },
     "Directory: nebula": {
       "status": "PASS",
       "details": "Created: comprehensive_test_outputs\\nebula",
-      "timestamp": 1752810576.578272
+      "timestamp": 1752816757.963594
     },
     "Directory: sparrow": {
       "status": "PASS",
       "details": "Created: comprehensive_test_outputs\\sparrow",
-      "timestamp": 1752810576.579765
+      "timestamp": 1752816757.963594
     },
     "Directory: empirical_binding": {
       "status": "PASS",
       "details": "Created: comprehensive_test_outputs\\empirical_binding",
-      "timestamp": 1752810576.580793
+      "timestamp": 1752816757.963594
     },
     "Directory: structure_modeling": {
       "status": "PASS",
       "details": "Created: comprehensive_test_outputs\\structure_modeling",
-      "timestamp": 1752810576.5817723
+      "timestamp": 1752816757.9650676
     },
     "Directory: impact_risk": {
       "status": "PASS",
       "details": "Created: comprehensive_test_outputs\\impact_risk",
-      "timestamp": 1752810576.5817723
+      "timestamp": 1752816757.9650676
     },
     "Directory: expression_filter": {
       "status": "PASS",
       "details": "Created: comprehensive_test_outputs\\expression_filter",
-      "timestamp": 1752810576.5817723
+      "timestamp": 1752816757.9650676
     },
     "Directory: final_dashboard": {
       "status": "PASS",
       "details": "Created: comprehensive_test_outputs\\final_dashboard",
-      "timestamp": 1752810576.5829113
+      "timestamp": 1752816757.96645
     },
     "Directory: conflict_resolution": {
       "status": "PASS",
       "details": "Created: comprehensive_test_outputs\\conflict_resolution",
-      "timestamp": 1752810576.5829113
+      "timestamp": 1752816757.96645
     },
     "Data Directory": {
       "status": "PASS",
       "details": "GTEx data copied to test directory",
-      "timestamp": 1752810576.5909965
+      "timestamp": 1752816757.9761083
     },
     "NEBULA": {
       "status": "PASS",
       "details": "Component functionality verified",
-      "timestamp": 1752810577.0026329
+      "timestamp": 1752816758.2582836
     },
     "SPARROW": {
       "status": "PASS",
       "details": "Component functionality verified",
-      "timestamp": 1752810577.5455227
+      "timestamp": 1752816768.8822176
     },
     "Empirical Binding": {
       "status": "PASS",
       "details": "Component functionality verified",
-      "timestamp": 1752810712.5597258
+      "timestamp": 1752816903.5386496
     },
     "Structure Modeling": {
       "status": "PASS",
       "details": "Component functionality verified",
-      "timestamp": 1752810713.5651999
+      "timestamp": 1752816904.5469537
     },
     "IMPACT Risk": {
       "status": "PASS",
       "details": "Component functionality verified",
-      "timestamp": 1752810713.571668
+      "timestamp": 1752816904.5573099
     },
     "Expression Filter": {
       "status": "PASS",
       "details": "Component functionality verified",
-      "timestamp": 1752810747.8585727
+      "timestamp": 1752816940.795818
     },
     "Final Dashboard": {
       "status": "PASS",
       "details": "Component functionality verified",
-      "timestamp": 1752810750.8579571
+      "timestamp": 1752816943.7870896
     },
     "Conflict Resolution": {
       "status": "PASS",
       "details": "Component functionality verified",
-      "timestamp": 1752810750.90682
+      "timestamp": 1752816943.790938
+    },
+    "Toxicophore Detection": {
+      "status": "PASS",
+      "details": "Component functionality verified",
+      "timestamp": 1752816943.8228421
+    },
+    "AI Explanation": {
+      "status": "PASS",
+      "details": "Component functionality verified",
+      "timestamp": 1752816943.830506
     },
     "Component Summary": {
       "status": "INFO",
-      "details": "8/8 components working correctly",
-      "timestamp": 1752810750.90682
+      "details": "10/10 components working correctly",
+      "timestamp": 1752816943.830506
     },
     "Key Metrics": {
       "status": "PASS",
       "details": "Decision: Reject, Score: 0.000",
-      "timestamp": 1752811159.722986
+      "timestamp": 1752817162.6360714
     },
     "Component Results": {
       "status": "PASS",
       "details": "8 successful, 0 failed",
-      "timestamp": 1752811159.722986
+      "timestamp": 1752817162.6360714
     },
     "Pipeline Metadata": {
       "status": "PASS",
       "details": "Pipeline version: 2.0",
-      "timestamp": 1752811159.722986
+      "timestamp": 1752817162.6360714
     },
     "File: nebula/generated_library.sdf": {
       "status": "PASS",
-      "details": "SDF file with generated molecules (126905 bytes)",
-      "timestamp": 1752811159.7250478
+      "details": "SDF file with generated molecules (63425 bytes)",
+      "timestamp": 1752817162.638226
     },
     "File: nebula/generation_metadata.json": {
       "status": "PASS",
-      "details": "NEBULA generation metadata (7338 bytes)",
-      "timestamp": 1752811159.7250478
+      "details": "NEBULA generation metadata (3868 bytes)",
+      "timestamp": 1752817162.638226
     },
     "File: sparrow/ranked_candidates.csv": {
       "status": "PASS",
-      "details": "SPARROW synthesis rankings (5163 bytes)",
-      "timestamp": 1752811159.7250478
+      "details": "SPARROW synthesis rankings (2643 bytes)",
+      "timestamp": 1752817162.6396995
     },
     "File: sparrow/synthesis_analysis.json": {
       "status": "PASS",
       "details": "SPARROW analysis metadata (1367 bytes)",
-      "timestamp": 1752811159.7263885
+      "timestamp": 1752817162.6396995
     },
     "File: empirical_binding/offtarget_predictions.json": {
       "status": "PASS",
-      "details": "Empirical binding predictions (258 bytes)",
-      "timestamp": 1752811159.7263885
+      "details": "Empirical binding predictions (93 bytes)",
+      "timestamp": 1752817162.6407053
     },
     "File: empirical_binding/prediction_metadata.json": {
       "status": "PASS",
-      "details": "Empirical binding metadata (12447 bytes)",
-      "timestamp": 1752811159.7263885
+      "details": "Empirical binding metadata (12040 bytes)",
+      "timestamp": 1752817162.6417058
     },
     "File: structure_modeling/binding_risk.json": {
       "status": "PASS",
       "details": "Structural binding risk (181 bytes)",
-      "timestamp": 1752811159.7274146
+      "timestamp": 1752817162.6417058
     },
     "File: structure_modeling/binding_pose.png": {
       "status": "PASS",
       "details": "Binding pose visualization (31511 bytes)",
-      "timestamp": 1752811159.7274146
+      "timestamp": 1752817162.6417058
     },
     "File: impact_risk/impact_summary.json": {
       "status": "PASS",
-      "details": "IMPACT risk summary (1567 bytes)",
-      "timestamp": 1752811159.7274146
+      "details": "IMPACT risk summary (1174 bytes)",
+      "timestamp": 1752817162.6417058
     },
     "File: impact_risk/detailed_analysis.json": {
       "status": "PASS",
-      "details": "IMPACT detailed analysis (3886 bytes)",
-      "timestamp": 1752811159.7288291
+      "details": "IMPACT detailed analysis (3617 bytes)",
+      "timestamp": 1752817162.6431105
     },
     "File: expression_filter/tissue_weighted_risk.json": {
       "status": "PASS",
-      "details": "Tissue-weighted risk (207 bytes)",
-      "timestamp": 1752811159.7288291
+      "details": "Tissue-weighted risk (99 bytes)",
+      "timestamp": 1752817162.6431105
     },
     "File: expression_filter/expression_analysis.json": {
       "status": "PASS",
-      "details": "Expression analysis metadata (13930 bytes)",
-      "timestamp": 1752811159.7288291
+      "details": "Expression analysis metadata (7282 bytes)",
+      "timestamp": 1752817162.6431105
     },
     "File: final_dashboard/compound_summary.json": {
       "status": "PASS",
       "details": "Final compound summary (3605 bytes)",
-      "timestamp": 1752811159.7288291
+      "timestamp": 1752817162.6431105
     },
     "File: final_dashboard/comprehensive_report.html": {
       "status": "PASS",
       "details": "Comprehensive dashboard (21011 bytes)",
-      "timestamp": 1752811159.7288291
+      "timestamp": 1752817162.6431105
     },
     "File: conflict_resolution/conflict_summary.json": {
       "status": "PASS",
-      "details": "Conflict resolution summary (1569 bytes)",
-      "timestamp": 1752811159.7288291
+      "details": "Conflict resolution summary (744 bytes)",
+      "timestamp": 1752817162.6446004
+    },
+    "File: toxicity/toxicophore_analysis.json": {
+      "status": "PASS",
+      "details": "Toxicophore analysis report (853 bytes)",
+      "timestamp": 1752817162.6446004
+    },
+    "File: ai/explanation_report.json": {
+      "status": "PASS",
+      "details": "AI explanation report (2109 bytes)",
+      "timestamp": 1752817162.6456077
     },
     "File Validation": {
       "status": "INFO",
-      "details": "15/15 files generated successfully",
-      "timestamp": 1752811159.7288291
+      "details": "17/17 files generated successfully",
+      "timestamp": 1752817162.6456077
     },
     "SDF Quality": {
       "status": "PASS",
-      "details": "60 valid molecules",
-      "timestamp": 1752811159.7961242
+      "details": "30 valid molecules",
+      "timestamp": 1752817162.6958632
     },
     "JSON Quality: empirical_binding/offtarget_predictions.json": {
       "status": "PASS",
-      "details": "Valid JSON with 10 entries",
-      "timestamp": 1752811159.7961242
+      "details": "Valid JSON with 5 entries",
+      "timestamp": 1752817162.6968646
     },
     "JSON Quality: impact_risk/impact_summary.json": {
       "status": "PASS",
       "details": "Valid JSON with 10 entries",
-      "timestamp": 1752811159.8227243
+      "timestamp": 1752817163.0590477
     },
     "JSON Quality: expression_filter/tissue_weighted_risk.json": {
       "status": "PASS",
-      "details": "Valid JSON with 10 entries",
-      "timestamp": 1752811159.837632
+      "details": "Valid JSON with 5 entries",
+      "timestamp": 1752817163.0914218
     },
     "CSV Quality": {
       "status": "PASS",
-      "details": "Valid CSV with 60 rows, 9 columns",
-      "timestamp": 1752811159.8414044
+      "details": "Valid CSV with 30 rows, 9 columns",
+      "timestamp": 1752817163.0972016
     },
     "Execution Time": {
-      "status": "WARN",
-      "details": "Slow execution: 585.9 seconds",
-      "timestamp": 1752811159.8427548
+      "status": "PASS",
+      "details": "Total execution time: 408.4 seconds",
+      "timestamp": 1752817163.0994134
     },
     "Memory Usage": {
       "status": "PASS",
-      "details": "Memory usage: 165.0 MB",
-      "timestamp": 1752811159.9188757
+      "details": "Memory usage: 163.8 MB",
+      "timestamp": 1752817163.211739
     },
     "Disk Usage": {
       "status": "PASS",
-      "details": "Output size: 27.7 MB",
-      "timestamp": 1752811159.926491
+      "details": "Output size: 27.5 MB",
+      "timestamp": 1752817163.2258651
     },
     "Invalid SMILES": {
       "status": "PASS",
       "details": "Handled invalid SMILES: RuntimeError",
-      "timestamp": 1752811159.9287603
+      "timestamp": 1752817163.228949
     },
     "Invalid UniProt ID": {
       "status": "PASS",
       "details": "Handled invalid UniProt ID: RuntimeError",
-      "timestamp": 1752811159.9320965
+      "timestamp": 1752817163.232513
+    },
+    "JSON Integration": {
+      "status": "PASS",
+      "details": "9/9 JSON files valid",
+      "timestamp": 1752817163.4091198
+    },
+    "Output Volume": {
+      "status": "PASS",
+      "details": "Generated 27.5 MB across 33 files",
+      "timestamp": 1752817163.417126
+    },
+    "Directory Structure": {
+      "status": "PASS",
+      "details": "All 10 required directories created",
+      "timestamp": 1752817163.418454
+    },
+    "Concurrent Access": {
+      "status": "PASS",
+      "details": "3/3 files read successfully",
+      "timestamp": 1752817163.4765584
+    },
+    "Memory Cleanup": {
+      "status": "PASS",
+      "details": "Memory usage: 276.2 MB after cleanup",
+      "timestamp": 1752817164.065326
+    },
+    "File Permissions": {
+      "status": "PASS",
+      "details": "File creation and deletion successful",
+      "timestamp": 1752817164.0725331
+    },
+    "File Count": {
+      "status": "PASS",
+      "details": "Generated 33 files",
+      "timestamp": 1752817164.080281
+    },
+    "Total Size": {
+      "status": "PASS",
+      "details": "Total output size: 28135.5 KB",
+      "timestamp": 1752817164.080281
+    },
+    "Critical Files": {
+      "status": "PASS",
+      "details": "All 4 critical files present",
+      "timestamp": 1752817164.0816355
     }
   },
-  "timestamp": 1752811159.9377308,
+  "timestamp": 1752817164.0895436,
   "test_molecule": "CC(=O)OC1=CC=CC=C1C(=O)O",
   "primary_target": "P33259",
   "output_directory": "comprehensive_test_outputs"

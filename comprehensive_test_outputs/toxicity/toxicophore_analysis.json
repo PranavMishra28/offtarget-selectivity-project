@@ -1,0 +1,30 @@
+{
+  "compound_smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+  "total_alerts": 1,
+  "high_severity_alerts": 0,
+  "max_risk_score": 0.3622338,
+  "average_risk_score": 0.3622338,
+  "overall_assessment": "Low Risk - No significant toxicophore alerts",
+  "alerts": [
+    {
+      "name": "metabolic_alert",
+      "description": "Metabolic liability alerts",
+      "severity": "Medium",
+      "risk_score": 0.3622338,
+      "recommendations": [
+        "Monitor metabolic stability",
+        "Consider blocking metabolic sites",
+        "Perform microsomal stability studies"
+      ]
+    }
+  ],
+  "recommendations": [
+    "Perform microsomal stability studies",
+    "Monitor metabolic stability",
+    "Consider blocking metabolic sites"
+  ],
+  "metadata": {
+    "analysis_timestamp": "2025-07-18T01:35:43.821840",
+    "version": "1.0"
+  }
+}

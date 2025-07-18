@@ -8,49 +8,39 @@
     "metrics": {
       "selectivity_score": 0.0,
       "selectivity_index": 0.0,
-      "off_target_count": 10,
-      "avg_off_target_score": 0.6143,
+      "off_target_count": 5,
+      "avg_off_target_score": 0.6762,
       "max_off_target_score": 0.7905,
       "risk_distribution": {
-        "mean": 0.6143,
-        "median": 0.5572,
-        "std": 0.1198,
-        "min": 0.5143,
+        "mean": 0.6762,
+        "median": 0.6,
+        "std": 0.0933,
+        "min": 0.6,
         "max": 0.7905,
         "quartiles": {
-          "q25": 0.5143,
-          "q50": 0.5572,
-          "q75": 0.7429
+          "q25": 0.6,
+          "q50": 0.6,
+          "q75": 0.7905
         },
-        "high_risk_count": 3,
-        "medium_risk_count": 7,
+        "high_risk_count": 2,
+        "medium_risk_count": 3,
         "low_risk_count": 0
       },
       "selectivity_classification": "Very Poor"
     },
     "off_target_scores": {
-      "E7ESS9": 0.7905,
-      "Q5H927": 0.5143,
-      "P11712": 0.5143,
-      "B4DI32": 0.5143,
+      "A0PJW2": 0.6,
+      "P05979": 0.6,
       "A8K802": 0.7905,
-      "A7YWD4": 0.6,
-      "B2RXH2": 0.5143,
-      "P10635": 0.5143,
-      "P05979": 0.7905,
-      "A0PJW2": 0.6
+      "E7ESS9": 0.7905,
+      "A7YWD4": 0.6
     },
     "combined_scores": {
-      "E7ESS9": 0.7905,
-      "Q5H927": 0.5143,
-      "P11712": 0.5143,
-      "B4DI32": 0.5143,
+      "A0PJW2": 0.6,
+      "P05979": 0.6,
       "A8K802": 0.7905,
-      "A7YWD4": 0.6,
-      "B2RXH2": 0.5143,
-      "P10635": 0.5143,
-      "P05979": 0.7905,
-      "A0PJW2": 0.6
+      "E7ESS9": 0.7905,
+      "A7YWD4": 0.6
     }
   },
   "safety_analysis": {
@@ -139,7 +129,7 @@
     }
   },
   "metadata": {
-    "analysis_timestamp": "2025-07-17T23:58:41.168294",
+    "analysis_timestamp": "2025-07-18T01:38:43.676803",
     "analysis_method": "enhanced_impact"
   }
 }

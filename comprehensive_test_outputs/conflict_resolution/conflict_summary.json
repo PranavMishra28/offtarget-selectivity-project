@@ -1,59 +1,29 @@
 {
+    "A0PJW2": {
+        "empirical_score": 1.0,
+        "structural_score": 0.0,
+        "delta": 1.0,
+        "relation": "conflict"
+    },
+    "P05979": {
+        "empirical_score": 1.0,
+        "structural_score": 0.0,
+        "delta": 1.0,
+        "relation": "conflict"
+    },
+    "A8K802": {
+        "empirical_score": 1.0,
+        "structural_score": 0.4762,
+        "delta": 0.5238,
+        "relation": "conflict"
+    },
     "E7ESS9": {
         "empirical_score": 1.0,
         "structural_score": 0.0,
         "delta": 1.0,
         "relation": "conflict"
     },
-    "Q5H927": {
-        "empirical_score": 0.8571428656578064,
-        "structural_score": 0.0,
-        "delta": 0.8571,
-        "relation": "conflict"
-    },
-    "P11712": {
-        "empirical_score": 0.8571428656578064,
-        "structural_score": 0.0,
-        "delta": 0.8571,
-        "relation": "conflict"
-    },
-    "B4DI32": {
-        "empirical_score": 0.8571428656578064,
-        "structural_score": 0.0,
-        "delta": 0.8571,
-        "relation": "conflict"
-    },
-    "A8K802": {
-        "empirical_score": 1.0,
-        "structural_score": 0.0,
-        "delta": 1.0,
-        "relation": "conflict"
-    },
     "A7YWD4": {
-        "empirical_score": 1.0,
-        "structural_score": 0.0,
-        "delta": 1.0,
-        "relation": "conflict"
-    },
-    "B2RXH2": {
-        "empirical_score": 0.8571428656578064,
-        "structural_score": 0.0,
-        "delta": 0.8571,
-        "relation": "conflict"
-    },
-    "P10635": {
-        "empirical_score": 0.8571428656578064,
-        "structural_score": 0.0,
-        "delta": 0.8571,
-        "relation": "conflict"
-    },
-    "P05979": {
-        "empirical_score": 1.0,
-        "structural_score": 0.4762,
-        "delta": 0.5238,
-        "relation": "conflict"
-    },
-    "A0PJW2": {
         "empirical_score": 1.0,
         "structural_score": 0.0,
         "delta": 1.0,
