@@ -1,62 +1,7 @@
 {
-    "O94975": {
-        "original_score": 0.9036,
-        "avg_expression_tpm": 0.0,
-        "avg_expression_percentile": 12.15,
-        "tissue_weighted_score": 0.9036
-    },
-    "P23197": {
-        "original_score": 0.8831,
-        "avg_expression_tpm": 0.0,
-        "avg_expression_percentile": 12.15,
-        "tissue_weighted_score": 0.8831
-    },
-    "P10635": {
-        "original_score": 0.8221,
-        "avg_expression_tpm": 0.0,
-        "avg_expression_percentile": 12.15,
-        "tissue_weighted_score": 0.8221
-    },
-    "A8CZ64": {
-        "original_score": 0.8115,
-        "avg_expression_tpm": 0.0,
-        "avg_expression_percentile": 12.15,
-        "tissue_weighted_score": 0.8115
-    },
-    "B4DI32": {
-        "original_score": 0.7821,
-        "avg_expression_tpm": 0.0,
-        "avg_expression_percentile": 12.15,
-        "tissue_weighted_score": 0.7821
-    },
-    "A8K802": {
-        "original_score": 0.7745,
-        "avg_expression_tpm": 0.0,
-        "avg_expression_percentile": 12.15,
-        "tissue_weighted_score": 0.7745
-    },
-    "B2R7G2": {
-        "original_score": 0.7721,
-        "avg_expression_tpm": 0.0,
-        "avg_expression_percentile": 12.15,
-        "tissue_weighted_score": 0.7721
-    },
-    "P27695": {
-        "original_score": 0.7556,
-        "avg_expression_tpm": 0.0,
-        "avg_expression_percentile": 12.15,
-        "tissue_weighted_score": 0.7556
-    },
-    "B2RXH2": {
-        "original_score": 0.7286,
-        "avg_expression_tpm": 0.0,
-        "avg_expression_percentile": 12.15,
-        "tissue_weighted_score": 0.7286
-    },
-    "P05184": {
-        "original_score": 0.7121,
-        "avg_expression_tpm": 0.0,
-        "avg_expression_percentile": 12.15,
-        "tissue_weighted_score": 0.7121
-    }
+  "P08100": 0.6228,
+  "P35372": 0.6152,
+  "P29274": 0.3696,
+  "P30542": 0.3119,
+  "P08173": 0.2771
 }

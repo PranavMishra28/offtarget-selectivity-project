@@ -1,0 +1,115 @@
+{
+  "uniprot_id": "P35372",
+  "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+  "protein_structure": {
+    "uniprot_id": "P35372",
+    "pdb_id": "AF_P35372",
+    "chain_id": "A",
+    "confidence": 0.8260001098447881,
+    "resolution": 1.9853119763020484,
+    "structure_path": "structures/P35372.pdb",
+    "sequence": "MOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCE"
+  },
+  "interactions": [
+    {
+      "type": "hydrogen_bond",
+      "residues": [
+        "RES1"
+      ],
+      "distance": 2.016633258295295,
+      "energy": -3.4435135340902514,
+      "confidence": 0.7067260886670759
+    },
+    {
+      "type": "hydrophobic",
+      "residues": [
+        "RES1"
+      ],
+      "distance": 3.7480546655871034,
+      "energy": -9.770041523352765,
+      "confidence": 0.7986606057804977
+    },
+    {
+      "type": "pi_stacking",
+      "residues": [
+        "RES1",
+        "RES2",
+        "RES3"
+      ],
+      "distance": 4.74342671219049,
+      "energy": -2.5626879397195053,
+      "confidence": 0.7235239316917462
+    },
+    {
+      "type": "salt_bridge",
+      "residues": [
+        "RES1",
+        "RES2",
+        "RES3"
+      ],
+      "distance": 3.145078822521683,
+      "energy": -1.3378638522611617,
+      "confidence": 0.7941042685621971
+    }
+  ],
+  "docking_analysis": {
+    "docking_score": 0.582661907766439,
+    "best_pose": {
+      "pose_id": 5,
+      "binding_energy": -8.739928616496584,
+      "rmsd": 1.0520947876536546,
+      "confidence": 0.8673834586358402
+    },
+    "num_poses": 6,
+    "poses": [
+      {
+        "pose_id": 5,
+        "binding_energy": -8.739928616496584,
+        "rmsd": 1.0520947876536546,
+        "confidence": 0.8673834586358402
+      },
+      {
+        "pose_id": 6,
+        "binding_energy": -8.447492534001743,
+        "rmsd": 1.365594773637866,
+        "confidence": 0.605511411712008
+      },
+      {
+        "pose_id": 2,
+        "binding_energy": -8.13694839511083,
+        "rmsd": 2.1537033167886035,
+        "confidence": 0.5681908533935083
+      },
+      {
+        "pose_id": 1,
+        "binding_energy": -8.054925674045737,
+        "rmsd": 1.0365893659998842,
+        "confidence": 0.6667013760781348
+      },
+      {
+        "pose_id": 4,
+        "binding_energy": -6.786500241407527,
+        "rmsd": 2.371944695692136,
+        "confidence": 0.8194342616396324
+      },
+      {
+        "pose_id": 3,
+        "binding_energy": -6.710086585508709,
+        "rmsd": 2.445020399521171,
+        "confidence": 0.5535816832686764
+      }
+    ],
+    "binding_site": {
+      "center": [
+        8.27830954330264,
+        -1.6052907738635867,
+        0.8038303133426172
+      ],
+      "radius": 11.084421578050495
+    }
+  },
+  "binding_score": 0.4664709557409358,
+  "plip_score": 0.3890103210572669,
+  "docking_score": 0.582661907766439,
+  "analysis_timestamp": "2025-07-18T23:05:10.493851"
+}

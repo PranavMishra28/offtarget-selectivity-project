@@ -494,6 +494,9 @@ class DashboardVisualizer:
     def _generate_summary_plot(self, data: Dict[str, Any], output_path: str):
         """Generate static summary plot"""
         try:
+            # Normalize the output path
+            output_path = os.path.normpath(output_path)
+            
             fig, axes = plt.subplots(2, 2, figsize=(15, 12))
             
             # Extract key data
@@ -718,12 +721,12 @@ async def generate_final_dashboard(
     
     # Generate comprehensive visualizations
     logger.info("Generating visualizations...")
-    visualization_paths = visualizer.generate_comprehensive_dashboard(aggregated_data, output_dir)
+    visualizations = visualizer.generate_comprehensive_dashboard(aggregated_data, output_dir)
     
     # Generate comprehensive report
     logger.info("Generating comprehensive report...")
     report_path = report_generator.generate_comprehensive_report(
-        aggregated_data, visualization_paths, 
+        aggregated_data, visualizations, 
         os.path.join(output_dir, "comprehensive_report.html")
     )
     
@@ -742,7 +745,7 @@ async def generate_final_dashboard(
         "metadata": {
             "dashboard_version": "2.0",
             "generation_timestamp": pd.Timestamp.now().isoformat(),
-            "visualization_paths": visualization_paths
+            "visualization_paths": visualizations
         }
     }
     
@@ -767,7 +770,7 @@ async def generate_final_dashboard(
     results = {
         "dashboard_dir": output_dir,
         "comprehensive_report": report_path,
-        "visualizations": visualization_paths,
+        "visualizations": visualizations,
         "legacy_files": {
             "json_summary": legacy_json_path,
             "csv_summary": legacy_csv_path if 'legacy_csv_path' in locals() else None
@@ -782,6 +785,6 @@ async def generate_final_dashboard(
     logger.info(f"✅ Enhanced final dashboard generation complete")
     logger.info(f"📁 Dashboard directory: {output_dir}")
     logger.info(f"📄 Comprehensive report: {report_path}")
-    logger.info(f"🖼 Visualizations: {len(visualization_paths)} generated")
+    logger.info(f"🖼 Visualizations: {len(visualizations)} generated")
     
     return results

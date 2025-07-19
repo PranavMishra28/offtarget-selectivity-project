@@ -1,0 +1,102 @@
+{
+  "synthesis_explanation": {
+    "decision": {
+      "title": "\ud83d\udd27 Structural Modifications Required",
+      "summary": "This compound requires structural modifications to improve selectivity or safety before synthesis.",
+      "confidence": "Low"
+    },
+    "key_factors": [
+      "Significant off-target binding predicted",
+      "Safety concerns identified",
+      "Synthesis feasibility may be challenging",
+      "Expression-weighted risks are elevated"
+    ],
+    "next_steps": [
+      "Design structural modifications",
+      "Focus on reducing off-target binding",
+      "Improve safety profile",
+      "Re-evaluate after modifications"
+    ],
+    "detailed_analysis": {
+      "impact_risk": {
+        "selectivity_score": 0.45,
+        "safety_score": 0.38,
+        "risky_offtargets_count": 2,
+        "top_risky_targets": [
+          {
+            "uniprot_id": "P08172",
+            "score": 0.78
+          },
+          {
+            "uniprot_id": "P08173",
+            "score": 0.65
+          }
+        ]
+      }
+    },
+    "risk_breakdown": {
+      "ion_channels": {
+        "count": 0,
+        "max_score": 0,
+        "avg_score": 0,
+        "targets": []
+      },
+      "enzymes": {
+        "count": 0,
+        "max_score": 0,
+        "avg_score": 0,
+        "targets": []
+      },
+      "receptors": {
+        "count": 0,
+        "max_score": 0,
+        "avg_score": 0,
+        "targets": []
+      },
+      "transporters": {
+        "count": 0,
+        "max_score": 0,
+        "avg_score": 0,
+        "targets": []
+      },
+      "other": {
+        "count": 2,
+        "max_score": 0.78,
+        "avg_score": 0.7150000000000001,
+        "targets": [
+          {
+            "id": "P08172",
+            "score": 0.78
+          },
+          {
+            "id": "P08173",
+            "score": 0.65
+          }
+        ]
+      }
+    },
+    "recommendations": [
+      "\ud83d\udd0d Perform additional selectivity profiling against key off-targets",
+      "\ud83e\uddec Consider structural modifications to improve target specificity",
+      "\ud83d\udee1\ufe0f Implement enhanced safety monitoring in preclinical studies",
+      "\ud83e\uddea Perform comprehensive toxicology studies",
+      "\ud83d\udea8 High safety risk - consider structural modifications or alternative approaches"
+    ],
+    "metadata": {
+      "generation_timestamp": "2025-07-18T02:20:01.265014",
+      "version": "1.0"
+    }
+  },
+  "ai_insights": {
+    "key_observations": [
+      "\u2705 Limited off-target interactions - focused target profile"
+    ],
+    "unusual_patterns": [],
+    "opportunities": [],
+    "warnings": []
+  },
+  "metadata": {
+    "generation_timestamp": "2025-07-18T02:20:01.265014",
+    "version": "1.0"
+  }
+}

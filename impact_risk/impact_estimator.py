@@ -499,7 +499,10 @@ class DecisionEngine:
     
     def __init__(self):
         self.logger = structlog.get_logger(__name__)
-        self.pipeline_config = config_manager.get_pipeline_config()
+        # Get configuration
+        config = config_manager.get_pipeline_config()
+        scoring_weights = config.get("scoring_weights", {})
+        thresholds = config.get("thresholds", {})
     
     def make_decision(
         self, 
@@ -516,7 +519,7 @@ class DecisionEngine:
         ion_channel_risk = ion_channel_risks.get("overall_ion_channel_risk", 0.0)
         
         # Get decision thresholds
-        thresholds = self.pipeline_config.decision_thresholds
+        thresholds = config_manager.get_thresholds()
         
         # Calculate decision score
         decision_score = self._calculate_decision_score(

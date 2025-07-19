@@ -1,7 +1,6 @@
 {
-  "uniprot_id": "A8K802",
-  "rmsd": 2.987,
-  "binding_score": 0.4762,
-  "pose_stable": false,
-  "notes": "Enhanced structural analysis with AlphaFold-3 + PLIP integration"
+  "uniprot_id": "P35372",
+  "binding_score": 0.5757899161462425,
+  "risk_level": "MEDIUM",
+  "recommendation": "Medium risk - Monitor closely"
 }

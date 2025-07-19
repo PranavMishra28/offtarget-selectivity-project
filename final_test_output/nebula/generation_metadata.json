@@ -1,0 +1,29 @@
+{
+  "input_smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+  "num_variants_requested": 10,
+  "num_molecules_generated": 3,
+  "model_results": {
+    "moses": {
+      "generated": 1,
+      "valid": 1,
+      "molecules": [
+        "CC(=O)OC1=CC=CC=C1C(=O)O"
+      ]
+    },
+    "chemformer": {
+      "generated": 2,
+      "valid": 2,
+      "molecules": [
+        "CC(=O)Oc1ccccc1C(=O)O",
+        "CC(=O)Oc1ccccc1C(=O)O.CO"
+      ]
+    },
+    "rdkit": {
+      "generated": 0,
+      "valid": 0,
+      "molecules": []
+    }
+  },
+  "generation_timestamp": "2025-07-18T23:05:10.440105",
+  "pipeline_version": "2.0"
+}

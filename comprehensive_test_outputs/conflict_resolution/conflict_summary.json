@@ -1,32 +1,9 @@
 {
-    "A0PJW2": {
-        "empirical_score": 1.0,
-        "structural_score": 0.0,
-        "delta": 1.0,
-        "relation": "conflict"
-    },
-    "P05979": {
-        "empirical_score": 1.0,
-        "structural_score": 0.0,
-        "delta": 1.0,
-        "relation": "conflict"
-    },
-    "A8K802": {
-        "empirical_score": 1.0,
-        "structural_score": 0.4762,
-        "delta": 0.5238,
-        "relation": "conflict"
-    },
-    "E7ESS9": {
-        "empirical_score": 1.0,
-        "structural_score": 0.0,
-        "delta": 1.0,
-        "relation": "conflict"
-    },
-    "A7YWD4": {
-        "empirical_score": 1.0,
-        "structural_score": 0.0,
-        "delta": 1.0,
-        "relation": "conflict"
-    }
+  "final_recommendation": "synthesize",
+  "confidence": "low",
+  "agreement_score": 0.3333333333333333,
+  "num_conflicts": 3,
+  "conflict_severity": "high",
+  "reasoning": "Weak consensus (33.3%), using weighted analysis",
+  "timestamp": "2025-07-18T23:03:51.170119"
 }

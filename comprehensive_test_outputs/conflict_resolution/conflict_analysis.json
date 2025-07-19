@@ -1,0 +1,120 @@
+{
+  "predictions": [
+    "{'model_name': 'IMPACT', 'prediction': 'Reject', 'confidence': 0.5, 'score': 0.0, 'metadata': {'component': 'impact_risk'}}",
+    "{'model_name': 'SPARROW', 'prediction': 'Synthesize', 'confidence': 1.0, 'score': 1.0, 'metadata': {'component': 'sparrow'}}",
+    "{'model_name': 'Structure Modeling', 'prediction': 'Modify Required', 'confidence': 0.07699999999999996, 'score': 0.07699999999999996, 'metadata': {'component': 'structure_modeling'}}"
+  ],
+  "prediction_groups": {
+    "reject": [
+      {
+        "model_name": "IMPACT",
+        "prediction": "Reject",
+        "confidence": 0.5,
+        "score": 0.0,
+        "metadata": {
+          "component": "impact_risk"
+        }
+      }
+    ],
+    "synthesize": [
+      {
+        "model_name": "SPARROW",
+        "prediction": "Synthesize",
+        "confidence": 1.0,
+        "score": 1.0,
+        "metadata": {
+          "component": "sparrow"
+        }
+      }
+    ],
+    "modify": [
+      {
+        "model_name": "Structure Modeling",
+        "prediction": "Modify Required",
+        "confidence": 0.07699999999999996,
+        "score": 0.07699999999999996,
+        "metadata": {
+          "component": "structure_modeling"
+        }
+      }
+    ]
+  },
+  "agreement_metrics": {
+    "total_predictions": 3,
+    "group_distribution": {
+      "reject": 1,
+      "synthesize": 1,
+      "modify": 1
+    },
+    "agreement_score": 0.3333333333333333,
+    "consensus_type": "reject",
+    "confidence_range": {
+      "min": 0.07699999999999996,
+      "max": 1.0,
+      "mean": 0.5256666666666666
+    }
+  },
+  "conflicts": [
+    {
+      "type": "reject_vs_synthesize",
+      "group1": {
+        "type": "reject",
+        "models": [
+          "IMPACT"
+        ],
+        "count": 1
+      },
+      "group2": {
+        "type": "synthesize",
+        "models": [
+          "SPARROW"
+        ],
+        "count": 1
+      },
+      "severity": "high"
+    },
+    {
+      "type": "reject_vs_modify",
+      "group1": {
+        "type": "reject",
+        "models": [
+          "IMPACT"
+        ],
+        "count": 1
+      },
+      "group2": {
+        "type": "modify",
+        "models": [
+          "Structure Modeling"
+        ],
+        "count": 1
+      },
+      "severity": "high"
+    },
+    {
+      "type": "synthesize_vs_modify",
+      "group1": {
+        "type": "synthesize",
+        "models": [
+          "SPARROW"
+        ],
+        "count": 1
+      },
+      "group2": {
+        "type": "modify",
+        "models": [
+          "Structure Modeling"
+        ],
+        "count": 1
+      },
+      "severity": "high"
+    }
+  ],
+  "consensus": {
+    "recommendation": "synthesize",
+    "confidence": "low",
+    "agreement_score": 0.3333333333333333,
+    "reasoning": "Weak consensus (33.3%), using weighted analysis"
+  },
+  "analysis_timestamp": "2025-07-18T23:03:51.170119"
+}

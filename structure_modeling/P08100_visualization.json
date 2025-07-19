@@ -1,0 +1,42 @@
+{
+  "protein_structure": {
+    "uniprot_id": "P08100",
+    "pdb_id": "AF_P08100",
+    "chain_id": "A",
+    "confidence": 0.816946871145575,
+    "resolution": 1.802614839397448,
+    "structure_path": "structures/P08100.pdb",
+    "sequence": "MOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCE"
+  },
+  "binding_site": {
+    "center": [
+      8.823866094735312,
+      0.06024506691967524,
+      4.040840804847646
+    ],
+    "radius": 12.065420058739175
+  },
+  "interactions": [
+    {
+      "type": "hydrogen_bond",
+      "residues": [
+        "RES1",
+        "RES2"
+      ],
+      "distance": 4.379269231227861,
+      "energy": -4.032443862542258,
+      "confidence": 0.7839089083529356
+    },
+    {
+      "type": "pi_stacking",
+      "residues": [
+        "RES1",
+        "RES2"
+      ],
+      "distance": 4.102257039821469,
+      "energy": -1.3190402791967042,
+      "confidence": 0.7500025083510651
+    }
+  ],
+  "binding_score": 0.43438124871189887
+}

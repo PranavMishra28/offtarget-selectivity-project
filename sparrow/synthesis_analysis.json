@@ -1,0 +1,101 @@
+{
+  "analysis_timestamp": "2025-07-18T21:33:12.216987",
+  "num_molecules": 1,
+  "summary_stats": {
+    "avg_synthesis_score": 1.0,
+    "avg_complexity": 0.0,
+    "avg_molecular_weight": 0.0
+  },
+  "detailed_analysis": {
+    "CC(=O)Oc1ccccc1C(=O)O": {
+      "analysis": {
+        "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+        "descriptors": {},
+        "rule_based_score": 0.8999999999999999,
+        "complexity_score": 0.0,
+        "overall_feasibility": 0.95,
+        "analysis_timestamp": "2025-07-18T21:33:12.197939"
+      },
+      "askcos_routes": [
+        {
+          "steps": [
+            "Step 1",
+            "Step 2",
+            "Step 3",
+            "Step 4",
+            "Step 5"
+          ],
+          "total_cost": 245.8950766782246,
+          "num_steps": 5,
+          "success_probability": 0.5522206812524935,
+          "reagent_availability": 0.5321339284015497,
+          "complexity_score": 0.40810231862771934,
+          "feasibility_score": 0.5587507636754413
+        },
+        {
+          "steps": [
+            "Step 1",
+            "Step 2",
+            "Step 3",
+            "Step 4",
+            "Step 5"
+          ],
+          "total_cost": 364.4882111152406,
+          "num_steps": 5,
+          "success_probability": 0.3719703255578339,
+          "reagent_availability": 0.594070363839946,
+          "complexity_score": 0.497755365667222,
+          "feasibility_score": 0.4894284412435193
+        },
+        {
+          "steps": [
+            "Step 1",
+            "Step 2"
+          ],
+          "total_cost": 329.5102247461827,
+          "num_steps": 2,
+          "success_probability": 0.6174852565662234,
+          "reagent_availability": 0.45383197813797344,
+          "complexity_score": 0.29360749045398776,
+          "feasibility_score": 0.5925699147500697
+        }
+      ],
+      "ibm_rxn_routes": [
+        {
+          "steps": [
+            "Retro step 1"
+          ],
+          "total_cost": 188.4351840600279,
+          "num_steps": 1,
+          "success_probability": 0.6879016929427837,
+          "reagent_availability": 0.6033992345749595,
+          "complexity_score": 0.19016004733517328,
+          "feasibility_score": 0.70038029339419
+        },
+        {
+          "steps": [
+            "Retro step 1",
+            "Retro step 2"
+          ],
+          "total_cost": 163.4439460931205,
+          "num_steps": 2,
+          "success_probability": 0.7386245941429872,
+          "reagent_availability": 0.5318581908036244,
+          "complexity_score": 0.20744580558504,
+          "feasibility_score": 0.6876789931205239
+        }
+      ],
+      "best_route": {
+        "steps": [
+          "Retro step 1"
+        ],
+        "total_cost": 188.4351840600279,
+        "num_steps": 1,
+        "success_probability": 0.6879016929427837,
+        "reagent_availability": 0.6033992345749595,
+        "complexity_score": 0.19016004733517328,
+        "feasibility_score": 0.70038029339419
+      }
+    }
+  }
+}

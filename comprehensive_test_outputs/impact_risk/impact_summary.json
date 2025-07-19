@@ -1,30 +1,30 @@
 {
   "on_target_id": "P33259",
   "on_target_score": 0.0,
-  "avg_off_target_score": 0.6762,
+  "avg_off_target_score": 0.4368,
   "selectivity_score": 0.0,
   "selectivity_index": 0.0,
   "decision_flag": "Reject",
   "risky_offtargets": [
     {
-      "uniprot_id": "A8K802",
-      "combined_score": 0.7905
+      "uniprot_id": "P08100",
+      "combined_score": 0.6228
     },
     {
-      "uniprot_id": "E7ESS9",
-      "combined_score": 0.7905
+      "uniprot_id": "P35372",
+      "combined_score": 0.6152
     },
     {
-      "uniprot_id": "A0PJW2",
-      "combined_score": 0.6
+      "uniprot_id": "P29274",
+      "combined_score": 0.357
     },
     {
-      "uniprot_id": "P05979",
-      "combined_score": 0.6
+      "uniprot_id": "P30542",
+      "combined_score": 0.3119
     },
     {
-      "uniprot_id": "A7YWD4",
-      "combined_score": 0.6
+      "uniprot_id": "P08173",
+      "combined_score": 0.2771
     }
   ],
   "ion_channel_risks": {

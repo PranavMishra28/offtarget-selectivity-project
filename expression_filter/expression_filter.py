@@ -224,8 +224,10 @@ class TissueWeightingEngine:
     
     def __init__(self):
         self.logger = structlog.get_logger(__name__)
-        self.pipeline_config = config_manager.get_pipeline_config()
-        self.tissue_weights = self.pipeline_config.tissue_weights
+        # Get configuration
+        config = config_manager.get_pipeline_config()
+        tissue_weights = config.get("tissue_weights", {})
+        self.tissue_weights = tissue_weights
     
     def calculate_tissue_weighted_risk(
         self, 

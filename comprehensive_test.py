@@ -104,8 +104,8 @@ class ComprehensiveTester:
             
             # Test API configuration
             api_config = config_manager.get_api_config("swiss_target_prediction")
-            if api_config and hasattr(api_config, 'base_url'):
-                self.log_test("API Config", "PASS", f"SwissTargetPrediction: {api_config.base_url}")
+            if api_config and isinstance(api_config, dict) and "base_url" in api_config:
+                self.log_test("API Config", "PASS", f"SwissTargetPrediction: {api_config['base_url']}")
             else:
                 self.log_test("API Config", "FAIL", "API configuration not loaded")
                 return False
@@ -120,8 +120,8 @@ class ComprehensiveTester:
             
             # Test pipeline configuration
             pipeline_config = config_manager.get_pipeline_config()
-            if pipeline_config and hasattr(pipeline_config, 'scoring_weights'):
-                self.log_test("Pipeline Config", "PASS", f"{len(pipeline_config.scoring_weights)} scoring weights configured")
+            if pipeline_config and isinstance(pipeline_config, dict) and "scoring_weights" in pipeline_config:
+                self.log_test("Pipeline Config", "PASS", f"{len(pipeline_config['scoring_weights'])} scoring weights configured")
             else:
                 self.log_test("Pipeline Config", "FAIL", "Pipeline configuration not loaded")
                 return False
@@ -192,7 +192,9 @@ class ComprehensiveTester:
                 "impact_risk",
                 "expression_filter",
                 "final_dashboard",
-                "conflict_resolution"
+                "conflict_resolution",
+                "toxicity",
+                "ai"
             ]
             
             for dir_name in expected_dirs:
@@ -368,10 +370,8 @@ class ComprehensiveTester:
         try:
             from conflict_resolution.conflict_resolution import resolve_model_conflicts
             
-            result = resolve_model_conflicts(
-                empirical_path=os.path.join(self.test_output_dir, "empirical_binding/offtarget_predictions.json"),
-                structural_path=os.path.join(self.test_output_dir, "structure_modeling/binding_risk.json"),
-                output_path=os.path.join(self.test_output_dir, "conflict_resolution/conflict_summary.json")
+            result = await resolve_model_conflicts(
+                output_dir=os.path.join(self.test_output_dir, "conflict_resolution")
             )
             
             return isinstance(result, dict) and len(result) > 0
@@ -617,7 +617,7 @@ class ComprehensiveTester:
             self.log_test("Performance", "FAIL", f"Performance test error: {e}")
             return False
     
-    def test_10_error_handling(self) -> bool:
+    async def test_10_error_handling(self) -> bool:
         """Test 10: Error Handling"""
         print("\n" + "="*80)
         print("TEST 10: ERROR HANDLING")
@@ -627,32 +627,50 @@ class ComprehensiveTester:
             # Test invalid SMILES handling
             from run import run_offtarget_selectivity_pipeline
             
-            try:
-                # This should raise an error
-                asyncio.run(run_offtarget_selectivity_pipeline(
-                    smiles="INVALID_SMILES",
-                    primary_uniprot_id="P33259"
-                ))
-                self.log_test("Invalid SMILES", "FAIL", "Should have raised an error")
-                return False
-            except ValueError:
-                self.log_test("Invalid SMILES", "PASS", "Correctly handled invalid SMILES")
-            except Exception as e:
-                self.log_test("Invalid SMILES", "PASS", f"Handled invalid SMILES: {type(e).__name__}")
+            async def test_invalid_smiles():
+                try:
+                    # This should raise an error
+                    await run_offtarget_selectivity_pipeline(
+                        smiles="INVALID_SMILES",
+                        primary_uniprot_id="P33259",
+                        output_base_dir=self.test_output_dir
+                    )
+                    return False, "Should have raised an error"
+                except (ValueError, RuntimeError) as e:
+                    return True, f"Handled invalid SMILES: {type(e).__name__}"
+                except Exception as e:
+                    return True, f"Handled invalid SMILES: {type(e).__name__}"
             
             # Test invalid UniProt ID handling
-            try:
-                # This should raise an error
-                asyncio.run(run_offtarget_selectivity_pipeline(
-                    smiles=self.test_molecule,
-                    primary_uniprot_id="INVALID"
-                ))
-                self.log_test("Invalid UniProt ID", "FAIL", "Should have raised an error")
+            async def test_invalid_uniprot():
+                try:
+                    # This should raise an error
+                    await run_offtarget_selectivity_pipeline(
+                        smiles=self.test_molecule,
+                        primary_uniprot_id="INVALID",
+                        output_base_dir=self.test_output_dir
+                    )
+                    return False, "Should have raised an error"
+                except (ValueError, RuntimeError) as e:
+                    return True, f"Handled invalid UniProt ID: {type(e).__name__}"
+                except Exception as e:
+                    return True, f"Handled invalid UniProt ID: {type(e).__name__}"
+            
+            # Test invalid SMILES
+            success, message = await test_invalid_smiles()
+            if success:
+                self.log_test("Invalid SMILES", "PASS", message)
+            else:
+                self.log_test("Invalid SMILES", "FAIL", message)
                 return False
-            except ValueError:
-                self.log_test("Invalid UniProt ID", "PASS", "Correctly handled invalid UniProt ID")
-            except Exception as e:
-                self.log_test("Invalid UniProt ID", "PASS", f"Handled invalid UniProt ID: {type(e).__name__}")
+            
+            # Test invalid UniProt ID
+            success, message = await test_invalid_uniprot()
+            if success:
+                self.log_test("Invalid UniProt ID", "PASS", message)
+            else:
+                self.log_test("Invalid UniProt ID", "FAIL", message)
+                return False
             
             return True
             

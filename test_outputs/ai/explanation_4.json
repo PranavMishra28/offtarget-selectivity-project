@@ -1,0 +1,111 @@
+{
+  "synthesis_explanation": {
+    "decision": {
+      "title": "\u274c Synthesis Not Recommended",
+      "summary": "This compound has significant safety or selectivity issues that preclude synthesis.",
+      "confidence": "Low"
+    },
+    "key_factors": [
+      "High off-target binding risk",
+      "Significant safety concerns",
+      "Poor synthesis feasibility",
+      "Unacceptable expression-weighted risks"
+    ],
+    "next_steps": [
+      "Consider alternative scaffolds",
+      "Explore different chemical series",
+      "Re-evaluate target selection"
+    ],
+    "detailed_analysis": {
+      "impact_risk": {
+        "selectivity_score": 0.25,
+        "safety_score": 0.15,
+        "risky_offtargets_count": 3,
+        "top_risky_targets": [
+          {
+            "uniprot_id": "P08172",
+            "score": 0.92
+          },
+          {
+            "uniprot_id": "P08173",
+            "score": 0.88
+          },
+          {
+            "uniprot_id": "P08174",
+            "score": 0.85
+          }
+        ]
+      }
+    },
+    "risk_breakdown": {
+      "ion_channels": {
+        "count": 0,
+        "max_score": 0,
+        "avg_score": 0,
+        "targets": []
+      },
+      "enzymes": {
+        "count": 0,
+        "max_score": 0,
+        "avg_score": 0,
+        "targets": []
+      },
+      "receptors": {
+        "count": 0,
+        "max_score": 0,
+        "avg_score": 0,
+        "targets": []
+      },
+      "transporters": {
+        "count": 0,
+        "max_score": 0,
+        "avg_score": 0,
+        "targets": []
+      },
+      "other": {
+        "count": 3,
+        "max_score": 0.92,
+        "avg_score": 0.8833333333333333,
+        "targets": [
+          {
+            "id": "P08172",
+            "score": 0.92
+          },
+          {
+            "id": "P08173",
+            "score": 0.88
+          },
+          {
+            "id": "P08174",
+            "score": 0.85
+          }
+        ]
+      }
+    },
+    "recommendations": [
+      "\ud83d\udd0d Perform additional selectivity profiling against key off-targets",
+      "\ud83e\uddec Consider structural modifications to improve target specificity",
+      "\u26a0\ufe0f Significant off-target binding predicted - consider alternative scaffolds",
+      "\ud83d\udee1\ufe0f Implement enhanced safety monitoring in preclinical studies",
+      "\ud83e\uddea Perform comprehensive toxicology studies",
+      "\ud83d\udea8 High safety risk - consider structural modifications or alternative approaches"
+    ],
+    "metadata": {
+      "generation_timestamp": "2025-07-18T02:20:01.267106",
+      "version": "1.0"
+    }
+  },
+  "ai_insights": {
+    "key_observations": [],
+    "unusual_patterns": [],
+    "opportunities": [],
+    "warnings": [
+      "\ud83d\udea8 Critical: Very low selectivity - high risk of off-target effects",
+      "\ud83d\udea8 Critical: Very low safety score - high toxicity risk"
+    ]
+  },
+  "metadata": {
+    "generation_timestamp": "2025-07-18T02:20:01.267106",
+    "version": "1.0"
+  }
+}

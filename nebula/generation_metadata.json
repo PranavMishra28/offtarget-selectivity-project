@@ -1,88 +1,30 @@
 {
   "input_smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
-  "generation_config": {
-    "library": "moses",
-    "num_variants": 5,
-    "novelty_threshold": 0.7,
-    "validity_check": true,
-    "pains_filter": true
-  },
-  "generation_stats": {
-    "total_generated": 5,
-    "valid_molecules": 5,
-    "conformers_generated": 15,
-    "validation_rate": 1.0
-  },
-  "validation_results": [
-    {
-      "valid": true,
-      "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
-      "molecular_weight": 180.15899999999996,
-      "logp": 1.3101,
-      "hbd": 1,
-      "hba": 3,
-      "rotatable_bonds": 2,
-      "rings": 1,
-      "aromatic_rings": 1,
-      "pains_filter": false,
-      "lipinski_violations": 0,
-      "reason": null
+  "num_variants_requested": 10,
+  "num_molecules_generated": 2,
+  "model_results": {
+    "moses": {
+      "generated": 1,
+      "valid": 1,
+      "molecules": [
+        "CC(=O)OC1=CC=CC=C1C(=O)O"
+      ]
     },
-    {
-      "valid": true,
-      "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
-      "molecular_weight": 180.15899999999996,
-      "logp": 1.3101,
-      "hbd": 1,
-      "hba": 3,
-      "rotatable_bonds": 2,
-      "rings": 1,
-      "aromatic_rings": 1,
-      "pains_filter": false,
-      "lipinski_violations": 0,
-      "reason": null
+    "chemformer": {
+      "generated": 3,
+      "valid": 3,
+      "molecules": [
+        "CC(=O)Oc1ccccc1C(=O)O",
+        "CC(=O)Oc1ccccc1C(=O)O",
+        "CC(=O)Oc1ccccc1C(=O)O"
+      ]
     },
-    {
-      "valid": true,
-      "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
-      "molecular_weight": 180.15899999999996,
-      "logp": 1.3101,
-      "hbd": 1,
-      "hba": 3,
-      "rotatable_bonds": 2,
-      "rings": 1,
-      "aromatic_rings": 1,
-      "pains_filter": false,
-      "lipinski_violations": 0,
-      "reason": null
-    },
-    {
-      "valid": true,
-      "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
-      "molecular_weight": 180.15899999999996,
-      "logp": 1.3101,
-      "hbd": 1,
-      "hba": 3,
-      "rotatable_bonds": 2,
-      "rings": 1,
-      "aromatic_rings": 1,
-      "pains_filter": false,
-      "lipinski_violations": 0,
-      "reason": null
-    },
-    {
-      "valid": true,
-      "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
-      "molecular_weight": 180.15899999999996,
-      "logp": 1.3101,
-      "hbd": 1,
-      "hba": 3,
-      "rotatable_bonds": 2,
-      "rings": 1,
-      "aromatic_rings": 1,
-      "pains_filter": false,
-      "lipinski_violations": 0,
-      "reason": null
+    "rdkit": {
+      "generated": 0,
+      "valid": 0,
+      "molecules": []
     }
-  ]
+  },
+  "generation_timestamp": "2025-07-18T21:33:12.177130",
+  "pipeline_version": "2.0"
 }

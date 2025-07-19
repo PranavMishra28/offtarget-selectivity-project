@@ -1,68 +1,41 @@
 """
-Configuration Management System for Off-Target & Selectivity Pipeline
-Handles loading, validation, and access to all pipeline settings.
+Configuration Management System
+Handles all configuration loading, validation, and access for the pipeline.
 """
 
 import os
 import yaml
-from pathlib import Path
+import json
 from typing import Dict, Any, Optional
-from dataclasses import dataclass
-from dotenv import load_dotenv
+from pathlib import Path
 import structlog
-
-# Load environment variables
-load_dotenv()
-
-@dataclass
-class APIConfig:
-    """API configuration settings"""
-    base_url: str
-    rate_limit: int
-    timeout: int
-    api_key: Optional[str] = None
-
-@dataclass
-class ModelConfig:
-    """Model configuration settings"""
-    library: str
-    num_variants: int
-    novelty_threshold: float
-    validity_check: bool
-    pains_filter: bool
-
-@dataclass
-class PipelineConfig:
-    """Pipeline configuration settings"""
-    scoring_weights: Dict[str, float]
-    decision_thresholds: Dict[str, float]
-    tissue_weights: Dict[str, float]
 
 class ConfigManager:
     """Centralized configuration management"""
     
     def __init__(self, config_path: str = "config.yaml"):
-        self.config_path = Path(config_path)
-        self.logger = structlog.get_logger()
-        self.config = self._load_config()
-        
-    def _load_config(self) -> Dict[str, Any]:
-        """Load configuration from YAML file"""
-        if not self.config_path.exists():
-            self.logger.warning(f"Config file {self.config_path} not found, using defaults")
-            return self._get_default_config()
-            
+        self.config_path = config_path
+        self.logger = structlog.get_logger(__name__)
+        self._config = None
+        self._load_config()
+    
+    def _load_config(self):
+        """Load configuration from file"""
         try:
-            with open(self.config_path, 'r') as f:
-                config = yaml.safe_load(f)
-            self.logger.info(f"Loaded configuration from {self.config_path}")
-            return config
+            if os.path.exists(self.config_path):
+                with open(self.config_path, 'r') as f:
+                    self._config = yaml.safe_load(f)
+                self.logger.info(f"Loaded configuration from {self.config_path}")
+            else:
+                self._config = self._get_default_config()
+                self._save_default_config()
+                self.logger.info(f"Created default configuration at {self.config_path}")
         except Exception as e:
-            self.logger.error(f"Failed to load config: {e}")
-            return self._get_default_config()
+            self.logger.error(f"Failed to load configuration: {e}")
+            self._config = self._get_default_config()
     
     def _get_default_config(self) -> Dict[str, Any]:
-        """Default configuration settings"""
+        """Get default configuration"""
         return {
             "apis": {
                 "swiss_target_prediction": {
@@ -70,84 +43,98 @@ class ConfigManager:
                     "rate_limit": 10,
                     "timeout": 30
                 },
-                "chembl": {
-                    "base_url": "https://www.ebi.ac.uk/chembl/api",
-                    "rate_limit": 60,
-                    "timeout": 15
+                "askcos": {
+                    "base_url": "https://askcos.mit.edu/api",
+                    "rate_limit": 5,
+                    "timeout": 60
+                },
+                "ibm_rxn": {
+                    "base_url": "https://rxn.res.ibm.com/rxn/api",
+                    "rate_limit": 10,
+                    "timeout": 45
+                },
+                "alphafold": {
+                    "base_url": "https://alphafold.ebi.ac.uk/api",
+                    "rate_limit": 2,
+                    "timeout": 300
                 }
             },
             "models": {
-                "generative": {
-                    "library": "moses",
-                    "num_variants": 50,
-                    "novelty_threshold": 0.7,
-                    "validity_check": True,
-                    "pains_filter": True
+                "moses": {
+                    "enabled": True,
+                    "model_path": "models/moses",
+                    "max_molecules": 100
+                },
+                "chemformer": {
+                    "enabled": True,
+                    "model_path": "models/chemformer",
+                    "max_molecules": 50
+                },
+                "rdkit": {
+                    "enabled": True,
+                    "max_molecules": 200
                 }
             },
             "pipeline": {
                 "scoring_weights": {
-                    "empirical_confidence": 0.4,
-                    "structural_binding_score": 0.3,
-                    "tissue_expression_weight": 0.2,
-                    "synthesis_feasibility": 0.1
+                    "empirical": 0.3,
+                    "structural": 0.25,
+                    "synthesis": 0.2,
+                    "expression": 0.25
                 },
-                "decision_thresholds": {
-                    "synthesize": 2.0,
-                    "watch": 1.0,
-                    "reject": 0.5
+                "thresholds": {
+                    "min_confidence": 0.3,
+                    "max_risk_score": 0.7,
+                    "min_synthesis_score": 0.4
                 }
             },
-            "performance": {
-                "max_concurrent_requests": 10,
-                "cache_ttl": 3600,
-                "batch_size": 50
+            "output": {
+                "base_directory": "outputs",
+                "save_intermediates": True,
+                "generate_visualizations": True
             }
         }
     
-    def get_api_config(self, api_name: str) -> APIConfig:
-        """Get API configuration for specified service"""
-        api_config = self.config.get("apis", {}).get(api_name, {})
-        
-        # Check for environment variable overrides
-        api_key = os.getenv(f"{api_name.upper()}_API_KEY")
-        
-        return APIConfig(
-            base_url=api_config.get("base_url", ""),
-            rate_limit=api_config.get("rate_limit", 10),
-            timeout=api_config.get("timeout", 30),
-            api_key=api_key
-        )
+    def _save_default_config(self):
+        """Save default configuration to file"""
+        try:
+            with open(self.config_path, 'w') as f:
+                yaml.dump(self._config, f, default_flow_style=False, indent=2)
+        except Exception as e:
+            self.logger.error(f"Failed to save default configuration: {e}")
     
-    def get_model_config(self, model_type: str) -> ModelConfig:
-        """Get model configuration for specified type"""
-        model_config = self.config.get("models", {}).get(model_type, {})
-        
-        return ModelConfig(
-            library=model_config.get("library", "moses"),
-            num_variants=model_config.get("num_variants", 50),
-            novelty_threshold=model_config.get("novelty_threshold", 0.7),
-            validity_check=model_config.get("validity_check", True),
-            pains_filter=model_config.get("pains_filter", True)
-        )
+    def get_config(self) -> Dict[str, Any]:
+        """Get full configuration"""
+        return self._config
     
-    def get_pipeline_config(self) -> PipelineConfig:
+    def get_api_config(self, api_name: Optional[str] = None) -> Dict[str, str]:
+        """Get API endpoints configuration"""
+        api_config = self._config.get("apis", {})
+        if api_name:
+            return api_config.get(api_name, {})
+        return api_config
+    
+    def get_model_config(self, model_type: Optional[str] = None) -> Dict[str, Any]:
+        """Get model configuration"""
+        if model_type:
+            return self._config.get("models", {}).get(model_type, {})
+        return self._config.get("models", {})
+    
+    def get_pipeline_config(self) -> Dict[str, Any]:
         """Get pipeline configuration"""
-        pipeline_config = self.config.get("pipeline", {})
-        
-        return PipelineConfig(
-            scoring_weights=pipeline_config.get("scoring_weights", {}),
-            decision_thresholds=pipeline_config.get("decision_thresholds", {}),
-            tissue_weights=pipeline_config.get("tissue_weights", {})
-        )
+        return self._config.get("pipeline", {})
     
-    def get_performance_config(self) -> Dict[str, Any]:
-        """Get performance configuration"""
-        return self.config.get("performance", {})
+    def get_output_config(self) -> Dict[str, Any]:
+        """Get output configuration"""
+        return self._config.get("output", {})
     
-    def get_logging_config(self) -> Dict[str, Any]:
-        """Get logging configuration"""
-        return self.config.get("logging", {})
+    def get_scoring_weights(self) -> Dict[str, float]:
+        """Get scoring weights"""
+        return self._config.get("pipeline", {}).get("scoring_weights", {})
+    
+    def get_thresholds(self) -> Dict[str, float]:
+        """Get threshold values"""
+        return self._config.get("pipeline", {}).get("thresholds", {})
 
-# Global configuration instance
+# Global config manager instance
 config_manager = ConfigManager() 

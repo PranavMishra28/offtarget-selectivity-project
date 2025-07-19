@@ -1,0 +1,87 @@
+{
+  "synthesis_explanation": {
+    "decision": {
+      "title": "\u26a0\ufe0f Proceed with Caution",
+      "summary": "This compound shows moderate risk factors that require careful monitoring during development.",
+      "confidence": "Medium"
+    },
+    "key_factors": [
+      "Moderate selectivity concerns identified",
+      "Some off-target binding predicted",
+      "Requires enhanced safety monitoring",
+      "Consider structural modifications"
+    ],
+    "next_steps": [
+      "Implement enhanced safety monitoring",
+      "Consider structural modifications",
+      "Perform additional selectivity studies"
+    ],
+    "detailed_analysis": {
+      "impact_risk": {
+        "selectivity_score": 0.65,
+        "safety_score": 0.72,
+        "risky_offtargets_count": 1,
+        "top_risky_targets": [
+          {
+            "uniprot_id": "P08172",
+            "score": 0.45
+          }
+        ]
+      }
+    },
+    "risk_breakdown": {
+      "ion_channels": {
+        "count": 0,
+        "max_score": 0,
+        "avg_score": 0,
+        "targets": []
+      },
+      "enzymes": {
+        "count": 0,
+        "max_score": 0,
+        "avg_score": 0,
+        "targets": []
+      },
+      "receptors": {
+        "count": 0,
+        "max_score": 0,
+        "avg_score": 0,
+        "targets": []
+      },
+      "transporters": {
+        "count": 0,
+        "max_score": 0,
+        "avg_score": 0,
+        "targets": []
+      },
+      "other": {
+        "count": 1,
+        "max_score": 0.45,
+        "avg_score": 0.45,
+        "targets": [
+          {
+            "id": "P08172",
+            "score": 0.45
+          }
+        ]
+      }
+    },
+    "recommendations": [],
+    "metadata": {
+      "generation_timestamp": "2025-07-18T02:20:01.262701",
+      "version": "1.0"
+    }
+  },
+  "ai_insights": {
+    "key_observations": [
+      "\u2705 Limited off-target interactions - focused target profile"
+    ],
+    "unusual_patterns": [],
+    "opportunities": [],
+    "warnings": []
+  },
+  "metadata": {
+    "generation_timestamp": "2025-07-18T02:20:01.262701",
+    "version": "1.0"
+  }
+}

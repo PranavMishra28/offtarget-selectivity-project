@@ -1,0 +1,95 @@
+{
+  "uniprot_id": "P35372",
+  "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+  "protein_structure": {
+    "uniprot_id": "P35372",
+    "pdb_id": "AF_P35372",
+    "chain_id": "A",
+    "confidence": 0.8202554389261183,
+    "resolution": 2.940470598187557,
+    "structure_path": "structures/P35372.pdb",
+    "sequence": "MOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCE"
+  },
+  "interactions": [
+    {
+      "type": "hydrogen_bond",
+      "residues": [
+        "RES1",
+        "RES2"
+      ],
+      "distance": 4.2857899899559975,
+      "energy": -1.6063429203005075,
+      "confidence": 0.8133651728362328
+    },
+    {
+      "type": "hydrophobic",
+      "residues": [
+        "RES1",
+        "RES2"
+      ],
+      "distance": 2.9706239526040967,
+      "energy": -7.662297225275767,
+      "confidence": 0.7160669655962287
+    }
+  ],
+  "docking_analysis": {
+    "docking_score": 0.7947930653221797,
+    "best_pose": {
+      "pose_id": 1,
+      "binding_energy": -11.921895979832696,
+      "rmsd": 2.493512347581484,
+      "confidence": 0.6077555190385204
+    },
+    "num_poses": 6,
+    "poses": [
+      {
+        "pose_id": 1,
+        "binding_energy": -11.921895979832696,
+        "rmsd": 2.493512347581484,
+        "confidence": 0.6077555190385204
+      },
+      {
+        "pose_id": 5,
+        "binding_energy": -11.323342708571571,
+        "rmsd": 1.283146321074284,
+        "confidence": 0.516719083926124
+      },
+      {
+        "pose_id": 4,
+        "binding_energy": -9.894768592190157,
+        "rmsd": 1.8774447633110483,
+        "confidence": 0.88916427594993
+      },
+      {
+        "pose_id": 3,
+        "binding_energy": -9.674859444760312,
+        "rmsd": 1.7426844968362816,
+        "confidence": 0.6659623349498749
+      },
+      {
+        "pose_id": 2,
+        "binding_energy": -8.503890668825793,
+        "rmsd": 0.5638773546242319,
+        "confidence": 0.7648808077073304
+      },
+      {
+        "pose_id": 6,
+        "binding_energy": -7.569601448274598,
+        "rmsd": 2.1437809691476097,
+        "confidence": 0.5858542985599815
+      }
+    ],
+    "binding_site": {
+      "center": [
+        -1.6649311960932582,
+        2.8768386829639,
+        3.229626534308828
+      ],
+      "radius": 6.704771334837707
+    }
+  },
+  "binding_score": 0.5757899161462425,
+  "plip_score": 0.42978781669561783,
+  "docking_score": 0.7947930653221797,
+  "analysis_timestamp": "2025-07-18T21:33:12.227989"
+}

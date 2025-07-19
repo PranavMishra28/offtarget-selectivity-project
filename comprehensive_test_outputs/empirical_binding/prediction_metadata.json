@@ -1,457 +1,160 @@
 {
-  "input_smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
-  "prediction_config": {
-    "min_confidence": 0.3,
-    "max_results": 5
-  },
+  "prediction_timestamp": "2025-07-18T23:03:03.345615",
+  "num_sources": 3,
+  "num_targets": 5,
+  "ranked_predictions": [
+    {
+      "target_id": "P08100",
+      "score": 0.7484485235646702
+    },
+    {
+      "target_id": "P35372",
+      "score": 0.6415010679539521
+    },
+    {
+      "target_id": "P29274",
+      "score": 0.5950704319074022
+    },
+    {
+      "target_id": "P30542",
+      "score": 0.5197778244392234
+    },
+    {
+      "target_id": "P08173",
+      "score": 0.46178877772731103
+    }
+  ],
   "source_predictions": {
-    "swiss_target_prediction": [],
-    "sea": [
+    "SwissTargetPrediction": [
       {
-        "uniprot_id": "P23219",
-        "score": 0.75,
-        "confidence": 0.6000000000000001,
-        "source": "sea",
-        "metadata": {
-          "target_name": "COX-1"
-        }
+        "target_id": "P08100",
+        "target_name": "G protein-coupled receptor",
+        "score": 0.689616,
+        "source": "SwissTargetPrediction",
+        "confidence": 0.6,
+        "combined_score": 0.6627312
       },
       {
-        "uniprot_id": "P35354",
-        "score": 0.65,
-        "confidence": 0.52,
-        "source": "sea",
-        "metadata": {
-          "target_name": "COX-2"
-        }
+        "target_id": "P35372",
+        "target_name": "Adenosine receptor",
+        "score": 0.603414,
+        "source": "SwissTargetPrediction",
+        "confidence": 0.6,
+        "combined_score": 0.6023898
       },
       {
-        "uniprot_id": "P29274",
-        "score": 0.45,
-        "confidence": 0.36000000000000004,
-        "source": "sea",
-        "metadata": {
-          "target_name": "Adenosine A2A receptor"
-        }
+        "target_id": "P29274",
+        "target_name": "Adenosine receptor A2a",
+        "score": 0.517212,
+        "source": "SwissTargetPrediction",
+        "confidence": 0.6,
+        "combined_score": 0.5420484
       },
       {
-        "uniprot_id": "P41594",
-        "score": 0.38,
-        "confidence": 0.30400000000000005,
-        "source": "sea",
-        "metadata": {
-          "target_name": "Cannabinoid receptor 1"
-        }
+        "target_id": "P30542",
+        "target_name": "Adenosine receptor A3",
+        "score": 0.43101,
+        "source": "SwissTargetPrediction",
+        "confidence": 0.6,
+        "combined_score": 0.481707
+      },
+      {
+        "target_id": "P08173",
+        "target_name": "Adrenoceptor alpha-1A",
+        "score": 0.344808,
+        "source": "SwissTargetPrediction",
+        "confidence": 0.6,
+        "combined_score": 0.4213656
       }
     ],
-    "chemprot": [
+    "SEA": [
       {
-        "uniprot_id": "P08172",
-        "score": 0.82,
-        "confidence": 0.738,
-        "source": "chemprot",
-        "metadata": {
-          "target_name": "Dopamine D1 receptor"
-        }
+        "target_id": "P08100",
+        "target_name": "G protein-coupled receptor",
+        "score": 0.7515738270365111,
+        "source": "SEA",
+        "confidence": 0.7,
+        "combined_score": 0.7361016789255577
       },
       {
-        "uniprot_id": "P21918",
-        "score": 0.71,
-        "confidence": 0.639,
-        "source": "chemprot",
-        "metadata": {
-          "target_name": "Dopamine D2 receptor"
-        }
+        "target_id": "P35372",
+        "target_name": "Adenosine receptor",
+        "score": 0.5369744911405884,
+        "source": "SEA",
+        "confidence": 0.7,
+        "combined_score": 0.5858821437984119
       },
       {
-        "uniprot_id": "P28223",
-        "score": 0.58,
-        "confidence": 0.522,
-        "source": "chemprot",
-        "metadata": {
-          "target_name": "5-HT2A receptor"
-        }
+        "target_id": "P29274",
+        "target_name": "Adenosine receptor A2a",
+        "score": 0.5341869120714258,
+        "source": "SEA",
+        "confidence": 0.7,
+        "combined_score": 0.583930838449998
       },
       {
-        "uniprot_id": "P08908",
-        "score": 0.42,
-        "confidence": 0.378,
-        "source": "chemprot",
-        "metadata": {
-          "target_name": "5-HT1A receptor"
-        }
+        "target_id": "P30542",
+        "target_name": "Adenosine receptor A3",
+        "score": 0.37737556481891027,
+        "source": "SEA",
+        "confidence": 0.7,
+        "combined_score": 0.4741628953732372
+      },
+      {
+        "target_id": "P08173",
+        "target_name": "Adrenoceptor alpha-1A",
+        "score": 0.2978023960381789,
+        "source": "SEA",
+        "confidence": 0.7,
+        "combined_score": 0.4184616772267252
       }
     ],
-    "chembl": [
+    "ChemProt": [
       {
-        "uniprot_id": "E7ESS9",
-        "score": 1.0,
+        "target_id": "P08100",
+        "target_name": "G protein-coupled receptor",
+        "score": 0.8664467025263614,
+        "source": "ChemProt",
         "confidence": 0.8,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL25",
-          "activity_type": "Log K'",
-          "activity_value": "1.39"
-        }
+        "combined_score": 0.8465126917684529
       },
       {
-        "uniprot_id": "A8K802",
-        "score": 1.0,
+        "target_id": "P35372",
+        "target_name": "Adenosine receptor",
+        "score": 0.7089018000906354,
+        "source": "ChemProt",
         "confidence": 0.8,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL25",
-          "activity_type": "IC50",
-          "activity_value": "62.5"
-        }
+        "combined_score": 0.7362312600634447
       },
       {
-        "uniprot_id": "P05979",
-        "score": 1.0,
+        "target_id": "P29274",
+        "target_name": "Adenosine receptor A2a",
+        "score": 0.5989029389602978,
+        "source": "ChemProt",
         "confidence": 0.8,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL25",
-          "activity_type": "IC50",
-          "activity_value": "12.5"
-        }
+        "combined_score": 0.6592320572722083
       },
       {
-        "uniprot_id": "A8K802",
-        "score": 1.0,
+        "target_id": "P30542",
+        "target_name": "Adenosine receptor A3",
+        "score": 0.5192336827777616,
+        "source": "ChemProt",
         "confidence": 0.8,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL25",
-          "activity_type": "Dose",
-          "activity_value": "325.0"
-        }
+        "combined_score": 0.6034635779444331
       },
       {
-        "uniprot_id": "A7YWD4",
-        "score": 1.0,
+        "target_id": "P08173",
+        "target_name": "Adrenoceptor alpha-1A",
+        "score": 0.43648436565029697,
+        "source": "ChemProt",
         "confidence": 0.8,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL25",
-          "activity_type": "IC50",
-          "activity_value": "1500.0"
-        }
-      },
-      {
-        "uniprot_id": "A0PJW2",
-        "score": 1.0,
-        "confidence": 0.8,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL25",
-          "activity_type": "IC50",
-          "activity_value": "100.0"
-        }
-      },
-      {
-        "uniprot_id": "A0PJW2",
-        "score": 1.0,
-        "confidence": 0.8,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL25",
-          "activity_type": "IC50",
-          "activity_value": "5.0"
-        }
-      },
-      {
-        "uniprot_id": "P05979",
-        "score": 1.0,
-        "confidence": 0.8,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL25",
-          "activity_type": "IC50",
-          "activity_value": "1280.0"
-        }
-      },
-      {
-        "uniprot_id": "A8K802",
-        "score": 1.0,
-        "confidence": 0.8,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL25",
-          "activity_type": "IC50",
-          "activity_value": "18000.0"
-        }
-      },
-      {
-        "uniprot_id": "A8K802",
-        "score": 1.0,
-        "confidence": 0.8,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL25",
-          "activity_type": "Ratio",
-          "activity_value": "0.1"
-        }
-      },
-      {
-        "uniprot_id": "B4DI32",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Potency",
-          "activity_value": "0.3162"
-        }
-      },
-      {
-        "uniprot_id": "Q5H927",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Potency",
-          "activity_value": "31.6228"
-        }
-      },
-      {
-        "uniprot_id": "B2RXH2",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Potency",
-          "activity_value": "31.6228"
-        }
-      },
-      {
-        "uniprot_id": "P11712",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Potency",
-          "activity_value": "15.8489"
-        }
-      },
-      {
-        "uniprot_id": "P10635",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "AC50",
-          "activity_value": null
-        }
-      },
-      {
-        "uniprot_id": "P05177",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "AC50",
-          "activity_value": "12.58925412"
-        }
-      },
-      {
-        "uniprot_id": "P33259",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "AC50",
-          "activity_value": null
-        }
-      },
-      {
-        "uniprot_id": "P05184",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "AC50",
-          "activity_value": null
-        }
-      },
-      {
-        "uniprot_id": "P11712",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "AC50",
-          "activity_value": "15.84893192"
-        }
-      },
-      {
-        "uniprot_id": "P23197",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Potency",
-          "activity_value": "79.4328"
-        }
-      },
-      {
-        "uniprot_id": "A0PJ95",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Potency",
-          "activity_value": "39.8107"
-        }
-      },
-      {
-        "uniprot_id": "B3KMM8",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Potency",
-          "activity_value": "0.5805"
-        }
-      },
-      {
-        "uniprot_id": "E7EMT8",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Inhibition",
-          "activity_value": "93.36755318"
-        }
-      },
-      {
-        "uniprot_id": "B2R7G2",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Inhibition",
-          "activity_value": "91.68545055"
-        }
-      },
-      {
-        "uniprot_id": "A8K2G5",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Potency",
-          "activity_value": "125.8925"
-        }
-      },
-      {
-        "uniprot_id": "P27695",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Potency",
-          "activity_value": "0.8437"
-        }
-      },
-      {
-        "uniprot_id": "P0DTD1",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Inhibition",
-          "activity_value": "7.345463944"
-        }
-      },
-      {
-        "uniprot_id": "O94975",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "inhibition",
-          "activity_value": "41.05"
-        }
-      },
-      {
-        "uniprot_id": "O94975",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "inhibition",
-          "activity_value": "-1.03"
-        }
-      },
-      {
-        "uniprot_id": "B4E2A5",
-        "score": 0.8571428656578064,
-        "confidence": 0.6857142925262452,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL350343",
-          "activity_type": "Inhibition",
-          "activity_value": "-7.7424"
-        }
-      },
-      {
-        "uniprot_id": "Q2G036",
-        "score": 0.7037037014961243,
-        "confidence": 0.5629629611968995,
-        "source": "chembl",
-        "metadata": {
-          "chembl_molecule": "CHEMBL4515737",
-          "activity_type": "INH",
-          "activity_value": null
-        }
+        "combined_score": 0.5455390559552078
       }
     ]
   },
   "aggregation_stats": {
-    "total_predictions": 39,
-    "unique_targets": 32,
-    "filtered_targets": 32,
-    "final_targets": 5
-  },
-  "top_predictions": [
-    {
-      "uniprot_id": "E7ESS9",
-      "score": 1.0
-    },
-    {
-      "uniprot_id": "A8K802",
-      "score": 1.0
-    },
-    {
-      "uniprot_id": "P05979",
-      "score": 1.0
-    },
-    {
-      "uniprot_id": "A7YWD4",
-      "score": 1.0
-    },
-    {
-      "uniprot_id": "A0PJW2",
-      "score": 1.0
-    }
-  ]
+    "avg_score": 0.5933173251185118,
+    "max_score": 0.7484485235646702,
+    "min_score": 0.46178877772731103
+  }
 }

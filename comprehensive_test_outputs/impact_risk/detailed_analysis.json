@@ -9,38 +9,38 @@
       "selectivity_score": 0.0,
       "selectivity_index": 0.0,
       "off_target_count": 5,
-      "avg_off_target_score": 0.6762,
-      "max_off_target_score": 0.7905,
+      "avg_off_target_score": 0.4368,
+      "max_off_target_score": 0.6228,
       "risk_distribution": {
-        "mean": 0.6762,
-        "median": 0.6,
-        "std": 0.0933,
-        "min": 0.6,
-        "max": 0.7905,
+        "mean": 0.4368,
+        "median": 0.357,
+        "std": 0.1509,
+        "min": 0.2771,
+        "max": 0.6228,
         "quartiles": {
-          "q25": 0.6,
-          "q50": 0.6,
-          "q75": 0.7905
+          "q25": 0.3119,
+          "q50": 0.357,
+          "q75": 0.6152
         },
-        "high_risk_count": 2,
-        "medium_risk_count": 3,
-        "low_risk_count": 0
+        "high_risk_count": 0,
+        "medium_risk_count": 2,
+        "low_risk_count": 3
       },
       "selectivity_classification": "Very Poor"
     },
     "off_target_scores": {
-      "A0PJW2": 0.6,
-      "P05979": 0.6,
-      "A8K802": 0.7905,
-      "E7ESS9": 0.7905,
-      "A7YWD4": 0.6
+      "P30542": 0.3119,
+      "P08173": 0.2771,
+      "P29274": 0.357,
+      "P08100": 0.6228,
+      "P35372": 0.6152
     },
     "combined_scores": {
-      "A0PJW2": 0.6,
-      "P05979": 0.6,
-      "A8K802": 0.7905,
-      "E7ESS9": 0.7905,
-      "A7YWD4": 0.6
+      "P30542": 0.3119,
+      "P08173": 0.2771,
+      "P29274": 0.357,
+      "P08100": 0.6228,
+      "P35372": 0.6152
     }
   },
   "safety_analysis": {
@@ -129,7 +129,7 @@
     }
   },
   "metadata": {
-    "analysis_timestamp": "2025-07-18T01:38:43.676803",
+    "analysis_timestamp": "2025-07-18T23:03:03.367021",
     "analysis_method": "enhanced_impact"
   }
 }

@@ -19,12 +19,12 @@
     }
   ],
   "recommendations": [
-    "Perform microsomal stability studies",
     "Monitor metabolic stability",
-    "Consider blocking metabolic sites"
+    "Consider blocking metabolic sites",
+    "Perform microsomal stability studies"
   ],
   "metadata": {
-    "analysis_timestamp": "2025-07-18T01:35:43.821840",
+    "analysis_timestamp": "2025-07-18T23:03:03.205531",
     "version": "1.0"
   }
 }

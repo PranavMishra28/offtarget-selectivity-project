@@ -55,8 +55,8 @@ class PipelineExecutor:
         self.results = {}
     
     async def execute_pipeline(
-        self, 
-        smiles: str, 
+        self,
+    smiles: str,
         primary_uniprot_id: str,
         output_base_dir: str = "."
     ) -> Dict[str, Any]:
@@ -308,22 +308,16 @@ class PipelineExecutor:
             self.results["final_dashboard"] = {"error": str(e)}
     
     async def _execute_conflict_resolution(self, output_base_dir: str):
-        """Execute conflict resolution analysis"""
-        self.logger.info("⚕️ [STEP 8] Conflict Resolution - Model Agreement Analysis")
+        """Execute conflict resolution step"""
+        self.logger.info("🔍 [STEP 8] Enhanced Conflict Resolution - Model Agreement Analysis")
         
         try:
-            result = resolve_model_conflicts(
-                empirical_path=os.path.join(output_base_dir, "empirical_binding/offtarget_predictions.json"),
-                structural_path=os.path.join(output_base_dir, "structure_modeling/binding_risk.json"),
-                output_path=os.path.join(output_base_dir, "conflict_resolution/conflict_summary.json")
+            result = await resolve_model_conflicts(
+                output_dir=os.path.join(output_base_dir, "conflict_resolution")
             )
             
-            self.results["conflict_resolution"] = {
-                "conflicts": result,
-                "num_conflicts": len([v for v in result.values() if v.get("relation") == "conflict"]),
-                "num_agreements": len([v for v in result.values() if v.get("relation") == "agreeing"])
-            }
-            self.logger.info(f"✅ Conflict resolution completed: {len(result)} targets analyzed")
+            self.results["conflict_resolution"] = result
+            self.logger.info(f"✅ Conflict resolution completed: {result.get('num_conflicts', 0)} conflicts identified")
             
         except Exception as e:
             self.logger.error(f"❌ Conflict resolution failed: {e}")
@@ -367,7 +361,7 @@ async def run_offtarget_selectivity_pipeline(
     output_base_dir: str = "."
 ) -> Dict[str, Any]:
     """
-    Main pipeline execution function.
+    Main entry point for the enhanced Off-Target & Selectivity pipeline.
     
     Args:
         smiles: Input SMILES string
@@ -379,34 +373,47 @@ async def run_offtarget_selectivity_pipeline(
     """
     
     # Validate inputs
+    if not smiles or not isinstance(smiles, str):
+        raise ValueError("SMILES must be a non-empty string")
+    
+    # Validate SMILES format
     mol = Chem.MolFromSmiles(smiles)
     if mol is None:
-        raise ValueError(f"Invalid SMILES string: {smiles}")
+        raise ValueError(f"Invalid SMILES format: {smiles}")
     
-    if not primary_uniprot_id or len(primary_uniprot_id) < 6:
-        raise ValueError(f"Invalid UniProt ID: {primary_uniprot_id}")
+    # Validate UniProt ID format
+    if not primary_uniprot_id or not isinstance(primary_uniprot_id, str):
+        raise ValueError("UniProt ID must be a non-empty string")
     
-    # Create output directories
+    # UniProt ID format validation (should be like P12345 or A0A123456789)
+    import re
+    uniprot_pattern = r'^[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9]([A-Z][A-Z0-9]{2}[0-9]){1,2}$'
+    if not re.match(uniprot_pattern, primary_uniprot_id):
+        raise ValueError(f"Invalid UniProt ID format: {primary_uniprot_id}. Expected format like P12345 or A0A123456789")
+    
+    # Create output directory
     os.makedirs(output_base_dir, exist_ok=True)
     
     # Execute pipeline
     executor = PipelineExecutor()
-    results = await executor.execute_pipeline(smiles, primary_uniprot_id, output_base_dir)
-    
-    return results
+    return await executor.execute_pipeline(
+        smiles=smiles,
+        primary_uniprot_id=primary_uniprot_id,
+        output_base_dir=output_base_dir
+    )
 
 if __name__ == "__main__":
     # Example compound: Aspirin
     compound_smiles = "CC(=O)OC1=CC=CC=C1C(=O)O"
     primary_target_uniprot = "P33259"  # COX-1
-    
+
     # Run pipeline
     async def main():
         try:
             results = await run_offtarget_selectivity_pipeline(
-                smiles=compound_smiles,
-                primary_uniprot_id=primary_target_uniprot
-            )
+        smiles=compound_smiles,
+        primary_uniprot_id=primary_target_uniprot
+    )
             
             # Print summary
             print("\n" + "="*80)

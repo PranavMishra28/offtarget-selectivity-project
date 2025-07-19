@@ -1,0 +1,62 @@
+{
+  "protein_structure": {
+    "uniprot_id": "P35372",
+    "pdb_id": "AF_P35372",
+    "chain_id": "A",
+    "confidence": 0.8260001098447881,
+    "resolution": 1.9853119763020484,
+    "structure_path": "structures/P35372.pdb",
+    "sequence": "MOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCE"
+  },
+  "binding_site": {
+    "center": [
+      8.27830954330264,
+      -1.6052907738635867,
+      0.8038303133426172
+    ],
+    "radius": 11.084421578050495
+  },
+  "interactions": [
+    {
+      "type": "hydrogen_bond",
+      "residues": [
+        "RES1"
+      ],
+      "distance": 2.016633258295295,
+      "energy": -3.4435135340902514,
+      "confidence": 0.7067260886670759
+    },
+    {
+      "type": "hydrophobic",
+      "residues": [
+        "RES1"
+      ],
+      "distance": 3.7480546655871034,
+      "energy": -9.770041523352765,
+      "confidence": 0.7986606057804977
+    },
+    {
+      "type": "pi_stacking",
+      "residues": [
+        "RES1",
+        "RES2",
+        "RES3"
+      ],
+      "distance": 4.74342671219049,
+      "energy": -2.5626879397195053,
+      "confidence": 0.7235239316917462
+    },
+    {
+      "type": "salt_bridge",
+      "residues": [
+        "RES1",
+        "RES2",
+        "RES3"
+      ],
+      "distance": 3.145078822521683,
+      "energy": -1.3378638522611617,
+      "confidence": 0.7941042685621971
+    }
+  ],
+  "binding_score": 0.4664709557409358
+}

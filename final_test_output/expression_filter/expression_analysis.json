@@ -1,0 +1,319 @@
+{
+  "input_scores": {
+    "P35372": 0.5764,
+    "P08100": 0.5613,
+    "P29274": 0.3729,
+    "P30542": 0.3313,
+    "P08173": 0.2789
+  },
+  "weighted_results": {
+    "P35372": {
+      "uniprot_id": "P35372",
+      "original_score": 0.5764,
+      "tissue_weighted_score": 0.5764,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.5764,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "P35372",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    },
+    "P08100": {
+      "uniprot_id": "P08100",
+      "original_score": 0.5613,
+      "tissue_weighted_score": 0.5613,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.5613,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "P08100",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    },
+    "P29274": {
+      "uniprot_id": "P29274",
+      "original_score": 0.3729,
+      "tissue_weighted_score": 0.3861,
+      "tissue_weight": 1.0353,
+      "mean_expression": 0.9288,
+      "tissue_specificity": 0.0707,
+      "risk_components": {
+        "base_risk": 0.3729,
+        "tissue_weight": 1.0353330934963578,
+        "expression_factor": 0.09288331162672715,
+        "specificity_factor": 0.07066618699271557,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "P29274",
+        "gtex": {},
+        "hpa": {
+          "tissues": {
+            "brain": 0.7255074589209543,
+            "heart": 1.487855661721709,
+            "liver": 1.1310741335606733,
+            "kidney": 0.688445985107883,
+            "lung": 1.8927417477995974,
+            "pancreas": 0.30046905745467734,
+            "spleen": 0.6910310240048045,
+            "stomach": 0.9125544364416941
+          },
+          "mean_expression": 0.9787099381264991,
+          "max_expression": 1.8927417477995974,
+          "expression_variance": 0.2590584890207991
+        },
+        "tissue": {
+          "tissues": {
+            "cerebellum": 0.569907616210346,
+            "cortex": 0.087850478092219,
+            "hippocampus": 3.022151754636077,
+            "amygdala": 0.37467218360294857,
+            "thalamus": 0.7787642088291089
+          },
+          "mean_expression": 0.8789562944080439,
+          "max_expression": 3.022151754636077,
+          "expression_variance": 1.1542652508335123
+        },
+        "combined": {
+          "mean_expression": 0.9288331162672715,
+          "max_expression": 3.022151754636077,
+          "expression_variance": 0.7066618699271556,
+          "tissue_specificity": 0.07066618699271557,
+          "source_count": 2
+        }
+      }
+    },
+    "P30542": {
+      "uniprot_id": "P30542",
+      "original_score": 0.3313,
+      "tissue_weighted_score": 0.3313,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.3313,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "P30542",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    },
+    "P08173": {
+      "uniprot_id": "P08173",
+      "original_score": 0.2789,
+      "tissue_weighted_score": 0.2789,
+      "tissue_weight": 1.0,
+      "mean_expression": 0.0,
+      "tissue_specificity": 0.0,
+      "risk_components": {
+        "base_risk": 0.2789,
+        "tissue_weight": 1.0,
+        "expression_factor": 0.0,
+        "specificity_factor": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "tissue_risk_factors": {
+        "cns_expression": 0.0,
+        "cardiac_expression": 0.0,
+        "liver_expression": 0.0,
+        "kidney_expression": 0.0,
+        "critical_tissue_penalty": 0.0
+      },
+      "expression_data": {
+        "uniprot_id": "P08173",
+        "gtex": {},
+        "hpa": {},
+        "tissue": {},
+        "combined": {
+          "mean_expression": 0.0,
+          "max_expression": 0.0,
+          "expression_variance": 0.0,
+          "tissue_specificity": 0.0,
+          "source_count": 0
+        }
+      }
+    }
+  },
+  "expression_analysis": {
+    "P35372": {
+      "uniprot_id": "P35372",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    },
+    "P08100": {
+      "uniprot_id": "P08100",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    },
+    "P29274": {
+      "uniprot_id": "P29274",
+      "gtex": {},
+      "hpa": {
+        "tissues": {
+          "brain": 0.7255074589209543,
+          "heart": 1.487855661721709,
+          "liver": 1.1310741335606733,
+          "kidney": 0.688445985107883,
+          "lung": 1.8927417477995974,
+          "pancreas": 0.30046905745467734,
+          "spleen": 0.6910310240048045,
+          "stomach": 0.9125544364416941
+        },
+        "mean_expression": 0.9787099381264991,
+        "max_expression": 1.8927417477995974,
+        "expression_variance": 0.2590584890207991
+      },
+      "tissue": {
+        "tissues": {
+          "cerebellum": 0.569907616210346,
+          "cortex": 0.087850478092219,
+          "hippocampus": 3.022151754636077,
+          "amygdala": 0.37467218360294857,
+          "thalamus": 0.7787642088291089
+        },
+        "mean_expression": 0.8789562944080439,
+        "max_expression": 3.022151754636077,
+        "expression_variance": 1.1542652508335123
+      },
+      "combined": {
+        "mean_expression": 0.9288331162672715,
+        "max_expression": 3.022151754636077,
+        "expression_variance": 0.7066618699271556,
+        "tissue_specificity": 0.07066618699271557,
+        "source_count": 2
+      }
+    },
+    "P30542": {
+      "uniprot_id": "P30542",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    },
+    "P08173": {
+      "uniprot_id": "P08173",
+      "gtex": {},
+      "hpa": {},
+      "tissue": {},
+      "combined": {
+        "mean_expression": 0.0,
+        "max_expression": 0.0,
+        "expression_variance": 0.0,
+        "tissue_specificity": 0.0,
+        "source_count": 0
+      }
+    }
+  },
+  "statistics": {
+    "total_targets": 5,
+    "mean_weight": 1.00706,
+    "max_weight": 1.0353,
+    "min_weight": 1.0,
+    "mean_expression": 0.18575999999999998,
+    "mean_specificity": 0.01414
+  },
+  "visualizations": {
+    "expression_heatmap": "final_test_output\\expression_filter/expression_visualizations\\expression_heatmap.png",
+    "risk_comparison": "final_test_output\\expression_filter/expression_visualizations\\risk_comparison.png"
+  },
+  "metadata": {
+    "analysis_timestamp": "2025-07-18T23:05:11.766327",
+    "analysis_method": "enhanced_expression_weighting"
+  }
+}

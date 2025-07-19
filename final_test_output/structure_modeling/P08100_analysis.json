@@ -1,0 +1,62 @@
+{
+  "uniprot_id": "P08100",
+  "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+  "protein_structure": {
+    "uniprot_id": "P08100",
+    "pdb_id": "AF_P08100",
+    "chain_id": "A",
+    "confidence": 0.8169606233678836,
+    "resolution": 1.9112598890856902,
+    "structure_path": "structures/P08100.pdb",
+    "sequence": "MOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCEMOCKSEQUENCE"
+  },
+  "interactions": [],
+  "docking_analysis": {
+    "docking_score": 0.7731422517052181,
+    "best_pose": {
+      "pose_id": 2,
+      "binding_energy": -11.597133775578271,
+      "rmsd": 2.984630028553182,
+      "confidence": 0.8882321253508694
+    },
+    "num_poses": 4,
+    "poses": [
+      {
+        "pose_id": 2,
+        "binding_energy": -11.597133775578271,
+        "rmsd": 2.984630028553182,
+        "confidence": 0.8882321253508694
+      },
+      {
+        "pose_id": 4,
+        "binding_energy": -10.984647320494933,
+        "rmsd": 1.2325580795485995,
+        "confidence": 0.7096267501201456
+      },
+      {
+        "pose_id": 1,
+        "binding_energy": -9.562349741712296,
+        "rmsd": 0.5680059147371239,
+        "confidence": 0.5988708955989414
+      },
+      {
+        "pose_id": 3,
+        "binding_energy": -7.198449893204479,
+        "rmsd": 2.0045428035136688,
+        "confidence": 0.8059839441806727
+      }
+    ],
+    "binding_site": {
+      "center": [
+        -2.867514377544822,
+        -9.086420695091999,
+        9.663068907144254
+      ],
+      "radius": 9.413549193548468
+    }
+  },
+  "binding_score": 0.3092569006820873,
+  "plip_score": 0.0,
+  "docking_score": 0.7731422517052181,
+  "analysis_timestamp": "2025-07-18T23:05:10.486810"
+}
